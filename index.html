@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kadjo Blin Ariel Christ Ebenezer — Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-avatar">K</div>
+    <div class="nav-brand-text">
+      <div class="nav-brand-name">Kadjo Ariel</div>
+      <div class="nav-brand-role">Full Stack Developer</div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="#hero" class="nav-link active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Accueil
+    </a>
+    <a href="#about" class="nav-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      À Propos
+    </a>
+    <a href="#skills" class="nav-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      Compétences
+    </a>
+    <a href="#projects" class="nav-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      Projets
+    </a>
+    <a href="#formation" class="nav-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      Formation
+    </a>
+    <a href="#contact" class="nav-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Contact
+    </a>
+  </div>
+  <a href="#contact" class="nav-cta">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    Me Contacter
+  </a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-name-1">Kadjo Blin Ariel</div>
+    <div class="hero-name-2">Christ Ebenezer</div>
+    <div class="hero-role">Développeur Full Stack Junior</div>
+    <p class="hero-desc">
+      Passionné par le développement web moderne, spécialisé en Laravel, Vue.js et
+      React. J'aime créer des applications web élégantes et performantes qui
+      résolvent des problèmes réels.
+    </p>
+    <div class="hero-tags">
+      <span class="hero-tag">Laravel</span>
+      <span class="hero-tag">Vue.js</span>
+      <span class="hero-tag">React</span>
+      <span class="hero-tag">TypeScript</span>
+      <span class="hero-tag">MySQL</span>
+      <span class="hero-tag">MongoDB</span>
+    </div>
+    <div class="hero-buttons">
+      <a href="#" class="btn-hero-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="17" height="17"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Télécharger mon CV
+      </a>
+      <a href="#contact" class="btn-hero-outline">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="17" height="17"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Me contacter
+      </a>
+    </div>
+    <div class="hero-socials">
+      <span>Suivez-moi :</span>
+      <a href="https://github.com/votre-username" target="_blank" class="social-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      </a>
+      <a href="https://linkedin.com/in/blin-kado-519b81138" target="_blank" class="social-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- CV Preview Card -->
+  <div class="hero-right">
+    <div class="cv-card">
+      <div class="cv-header">
+        <div class="cv-avatar">KB</div>
+        <div class="cv-header-text">
+          <div class="cv-header-name">Kadjo Blin Ariel Christ</div>
+          <div class="cv-header-role">Développeur Web Full Stack Junior</div>
+        </div>
+      </div>
+      <div class="cv-body">
+        <div class="cv-section-title">Profil</div>
+        <p style="font-size:0.6rem;color:#6b7280;line-height:1.5;margin-bottom:6px;">
+          Développeur web full stack junior, j'ai acquis une expérience pratique à travers la réalisation de projets académiques et personnels. J'ai développé des applications web ainsi que des API en utilisant des technologies comme Laravel, Vue.js et React.
+        </p>
+        <div class="cv-section-title">Contacts</div>
+        <div class="cv-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13"/></svg>
+          +225 01 50 50 58 60
+        </div>
+        <div class="cv-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/></svg>
+          christ.kadjo@eptbech.au
+        </div>
+        <div class="cv-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Port Bouët, Côte d'Ivoire
+        </div>
+        <div class="cv-section-title">Projets réalisés</div>
+        <div class="cv-project">
+          <div class="cv-project-name">● YOWL – Plateforme collaborative</div>
+          <div class="cv-project-desc">Technologies : Laravel, MySQL, TailwindCSS</div>
+        </div>
+        <div class="cv-project">
+          <div class="cv-project-name">● POST-IT APP</div>
+          <div class="cv-project-desc">Application de gestion de notes avec intégration API externe.</div>
+        </div>
+        <div class="cv-project">
+          <div class="cv-project-name">● Application e-commerce</div>
+          <div class="cv-project-desc">Technologies : PHP, MySQL, Laravel, HTML, CSS, TailwindCSS</div>
+        </div>
+        <div class="cv-project">
+          <div class="cv-project-name">● Showtime</div>
+          <div class="cv-project-desc">Technologies : React.js, Laravel, MongoDB, TailwindCSS</div>
+        </div>
+        <div class="cv-section-title">Compétences techniques</div>
+        <div class="cv-skills-group"><span class="cv-skills-label">Technologies : </span><span class="cv-skills-val">JavaScript, PHP</span></div>
+        <div class="cv-skills-group"><span class="cv-skills-label">Dev Web : </span><span class="cv-skills-val">React JS, Laravel, Vue JS, TailwindCSS, HTML5/CSS</span></div>
+        <div class="cv-skills-group"><span class="cv-skills-label">Base de données : </span><span class="cv-skills-val">MySQL, MongoDB</span></div>
+        <div class="cv-section-title">Formation</div>
+        <div class="cv-project">
+          <div class="cv-project-name">2025 – 2026 : Développeur Full Stack</div>
+          <div class="cv-project-desc">Formation professionnelle en développement web</div>
+        </div>
+      </div>
+    </div>
+    <div class="cv-available-badge">Disponible</div>
+  </div>
+</section>
+
+<!-- CONTACT BAR -->
+<div class="contact-bar">
+  <div class="contact-bar-item">
+    <div class="contact-bar-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </div>
+    <div>
+      <div class="contact-bar-label">Téléphone</div>
+      <div class="contact-bar-value">+225 01 50 50 58 60/07 01 71 07 06</div>
+    </div>
+  </div>
+  <div class="contact-bar-item">
+    <div class="contact-bar-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    </div>
+    <div>
+      <div class="contact-bar-label">Email</div>
+      <div class="contact-bar-value">christ.kadjo@epiech.eu</div>
+    </div>
+  </div>
+  <div class="contact-bar-item">
+    <div class="contact-bar-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    </div>
+    <div>
+      <div class="contact-bar-label">Localisation</div>
+      <div class="contact-bar-value">Port Bouët, Côte d'Ivoire</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="about-grid">
+   <div class="about-photo" style="padding:0; overflow:hidden;">
+  <img src="/57 copie(1).png" alt="Kadjo Blin Ariel"
+       style="width:100%; height:100%; object-fit:cover; object-position: top center;" />
+</div>
+    <div class="about-text">
+      <div class="section-badge">À Propos</div>
+      <h2>Kadjo Blin Ariel Christ Ebenezer</h2>
+      <p class="section-sub">Développeur Full Stack Junior passionné</p>
+      <p>
+        Développeur web full stack junior, j'ai acquis une expérience pratique à travers la réalisation de projets académiques et personnels. J'ai développé des applications web ainsi que des API en utilisant des technologies comme Laravel, Vue.js et React.
+      </p>
+      <p>
+        Curieux, rigoureux et motivé, je suis constamment en quête d'apprentissages et d'amélioration. Je souhaite aujourd'hui mettre mes compétences en pratique et évoluer au sein d'un environnement professionnel encadré.
+      </p>
+      <div class="about-info">
+        <div class="about-info-item">
+          <div class="about-info-label">Localisation</div>
+          <div class="about-info-value">Port Bouët, Côte d'Ivoire</div>
+        </div>
+        <div class="about-info-item">
+          <div class="about-info-label">Disponibilité</div>
+          <div class="about-info-value" style="color:#16a34a;">✓ Disponible</div>
+        </div>
+        <div class="about-info-item">
+          <div class="about-info-label">LinkedIn</div>
+          <div class="about-info-value" style="font-size:0.8rem;">linkedin.com/in/blin-kado</div>
+        </div>
+        <div class="about-info-item">
+          <div class="about-info-label">Langues</div>
+          <div class="about-info-value">Français · Anglais</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section" style="background: #f3f4f6;">
+  <div style="text-align:center; margin-bottom:2.5rem;">
+    <div class="section-badge" style="display:inline-flex;">Expertise</div>
+    <h2 style="font-size:clamp(1.8rem,3vw,2.2rem);font-weight:800;color:var(--gray-700);margin-top:0.75rem;">Compétences Techniques</h2>
+    <div class="skills-underline"></div>
+  </div>
+  <div class="skills-grid">
+
+    <!-- Frontend -->
+    <div class="skill-card">
+      <div class="skill-card-title"><span class="dot"></span>Frontend</div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>React.js</span><span>85%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>Vue.js</span><span>80%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>TypeScript</span><span>75%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>Tailwind CSS</span><span>90%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>JavaScript</span><span>85%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+      </div>
+    </div>
+
+    <!-- Backend -->
+    <div class="skill-card">
+      <div class="skill-card-title"><span class="dot"></span>Backend</div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>Laravel</span><span>85%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>PHP</span><span>80%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>Node.js</span><span>70%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>API REST</span><span>85%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+      </div>
+    </div>
+
+    <!-- Base de données -->
+    <div class="skill-card">
+      <div class="skill-card-title"><span class="dot"></span>Base de données</div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>MySQL</span><span>80%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>MongoDB</span><span>75%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>Mongoose</span><span>70%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+      </div>
+    </div>
+
+    <!-- Outils & DevOps -->
+    <div class="skill-card">
+      <div class="skill-card-title"><span class="dot"></span>Outils &amp; DevOps</div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>Git/GitHub</span><span>85%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill pink" data-width="85"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>VS Code</span><span>90%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill pink" data-width="90"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>Postman</span><span>80%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill pink" data-width="80"></div></div>
+      </div>
+      <div class="skill-bar-item">
+        <div class="skill-bar-label"><span>Trello</span><span>75%</span></div>
+        <div class="skill-bar-track"><div class="skill-bar-fill pink" data-width="75"></div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div style="text-align:center; margin-bottom:3rem;">
+    <div class="section-badge" style="display:inline-flex;">Projets</div>
+    <h2 style="font-size:clamp(1.8rem,3vw,2.2rem);font-weight:800;color:var(--gray-700);margin-top:0.75rem;">Projets Réalisés</h2>
+    <div class="skills-underline"></div>
+    <p class="section-sub">Découvrez une sélection de mes projets réalisés en développement web full-stack</p>
+  </div>
+
+  <div class="projects-grid">
+
+    <!-- YOWL -->
+    <div class="project-card-v2 card-blue">
+      <div class="project-card-top">
+        <div class="project-card-head">
+          <div class="project-icon blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <span class="project-num">#01</span>
+        </div>
+        <h3 class="project-name">YOWL – Plateforme Collaborative</h3>
+        <p class="project-desc">Système de partage de liens avec génération automatique d'aperçus. Backend robuste et intégration frontend.</p>
+      </div>
+      <div class="project-card-bottom">
+        <div class="project-tech-label">Technologies utilisées</div>
+        <div class="project-tags">
+          <span class="project-tag">Laravel</span>
+          <span class="project-tag">MySQL</span>
+          <span class="project-tag">TailwindCSS</span>
+          <span class="project-tag">API REST</span>
+        </div>
+        <div class="project-features-label">Fonctionnalités clés</div>
+        <ul class="project-features">
+          <li>Architecture backend robuste avec Laravel</li>
+          <li>Système de gestion des utilisateurs et permissions</li>
+          <li>Génération automatique d'aperçus de liens</li>
+          <li>API RESTful pour l'intégration frontend</li>
+        </ul>
+        <div class="project-links-v2">
+          <a href="#" class="project-btn-outline">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77A5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            Code
+          </a>
+          <a href="#" class="project-btn-primary blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Démo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- POST-IT -->
+    <div class="project-card-v2 card-pink">
+      <div class="project-card-top">
+        <div class="project-card-head">
+          <div class="project-icon pink">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <span class="project-num">#02</span>
+        </div>
+        <h3 class="project-name">Post-It App</h3>
+        <p class="project-desc">Application moderne de gestion de notes avec intégration d'API externe et interface utilisateur intuitive.</p>
+      </div>
+      <div class="project-card-bottom">
+        <div class="project-tech-label">Technologies utilisées</div>
+        <div class="project-tags">
+          <span class="project-tag">Vue.js</span>
+          <span class="project-tag">API RESTful</span>
+          <span class="project-tag">TailwindCSS</span>
+        </div>
+        <div class="project-features-label">Fonctionnalités clés</div>
+        <ul class="project-features">
+          <li>CRUD complet pour la gestion de notes</li>
+          <li>Intégration d'API externe sécurisée</li>
+          <li>Interface responsive et accessible</li>
+          <li>State management optimisé</li>
+        </ul>
+        <div class="project-links-v2">
+          <a href="#" class="project-btn-outline">Code</a>
+          <a href="#" class="project-btn-primary pink">Démo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- E-COMMERCE -->
+    <div class="project-card-v2 card-green">
+      <div class="project-card-top">
+        <div class="project-card-head">
+          <div class="project-icon green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          </div>
+          <span class="project-num">#03</span>
+        </div>
+        <h3 class="project-name">Application E-Commerce</h3>
+        <p class="project-desc">Développement full stack d'une boutique en ligne avec fonctionnalités CRUD et interface responsive.</p>
+      </div>
+      <div class="project-card-bottom">
+        <div class="project-tech-label">Technologies utilisées</div>
+        <div class="project-tags">
+          <span class="project-tag">PHP</span>
+          <span class="project-tag">Laravel</span>
+          <span class="project-tag">MySQL</span>
+          <span class="project-tag">TailwindCSS</span>
+        </div>
+        <div class="project-features-label">Fonctionnalités clés</div>
+        <ul class="project-features">
+          <li>Gestion complète des produits et catégories</li>
+          <li>Interface responsive et accessible</li>
+          <li>Gestion de la base de données relationnelle</li>
+          <li>Système d'authentification sécurisé</li>
+        </ul>
+        <div class="project-links-v2">
+          <a href="#" class="project-btn-outline">Code</a>
+          <a href="#" class="project-btn-primary green">Démo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHOWTIME -->
+    <div class="project-card-v2 card-orange">
+      <div class="project-card-top">
+        <div class="project-card-head">
+          <div class="project-icon orange">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          </div>
+          <span class="project-num">#04</span>
+        </div>
+        <h3 class="project-name">Showtime</h3>
+        <p class="project-desc">Plateforme de gestion de réservations de tickets d'événements. Full stack avec API REST.</p>
+      </div>
+      <div class="project-card-bottom">
+        <div class="project-tech-label">Technologies utilisées</div>
+        <div class="project-tags">
+          <span class="project-tag">React.js</span>
+          <span class="project-tag">Laravel</span>
+          <span class="project-tag">MongoDB</span>
+          <span class="project-tag">TailwindCSS</span>
+        </div>
+        <div class="project-features-label">Fonctionnalités clés</div>
+        <ul class="project-features">
+          <li>Gestion des réservations en temps réel</li>
+          <li>API REST performante avec Laravel</li>
+          <li>Base de données MongoDB flexible</li>
+          <li>Interface React.js moderne</li>
+        </ul>
+        <div class="project-links-v2">
+          <a href="#" class="project-btn-outline">Code</a>
+          <a href="#" class="project-btn-primary orange">Démo</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FORMATION -->
+<!-- FORMATION -->
+<section id="formation" class="section">
+  <div class="section-badge">Formation</div>
+  <h2>Parcours de Formation</h2>
+  <p class="section-sub">Mon parcours académique et professionnel.</p>
+
+  <div class="formation-timeline">
+
+    <!-- Ligne centrale -->
+    <div class="formation-line"></div>
+
+    <!-- Item gauche -->
+    <div class="formation-row">
+      <div class="formation-card-wrap left">
+        <div class="formation-card">
+          <div class="formation-card-head">
+            <div class="formation-icon blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <div class="formation-meta">
+              <span class="formation-date">2025 – 2026</span>
+              <span class="formation-badge encours">En cours</span>
+            </div>
+          </div>
+          <h3 class="formation-title">Développement Full Stack</h3>
+          <div class="formation-school">Programme WECODE</div>
+          <p class="formation-desc">Formation intensive en développement web moderne avec Laravel, Vue.js, React et méthodologie Agile</p>
+          <div class="formation-bar blue"></div>
+        </div>
+      </div>
+      <div class="formation-dot"></div>
+      <div class="formation-card-wrap right empty"></div>
+    </div>
+
+    <!-- Item droite -->
+    <div class="formation-row">
+      <div class="formation-card-wrap left empty"></div>
+      <div class="formation-dot"></div>
+      <div class="formation-card-wrap right">
+        <div class="formation-card">
+          <div class="formation-card-head">
+            <div class="formation-icon pink">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div class="formation-meta">
+              <span class="formation-date">2025</span>
+              <span class="formation-badge encours">En cours</span>
+            </div>
+          </div>
+          <h3 class="formation-title">Licence 1</h3>
+          <div class="formation-school">Université Virtuelle de Côte d'Ivoire</div>
+          <p class="formation-desc">Cursus universitaire en cours - Formation académique fondamentale</p>
+          <div class="formation-bar pink"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item gauche -->
+    <div class="formation-row">
+      <div class="formation-card-wrap left">
+        <div class="formation-card">
+          <div class="formation-card-head">
+            <div class="formation-icon green">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="formation-meta">
+              <span class="formation-date">2024 – 2025</span>
+              <span class="formation-badge complete">Complété</span>
+            </div>
+          </div>
+          <h3 class="formation-title">Formation en Cybersécurité Digitale</h3>
+          <div class="formation-school">ITworx Academy (Kodal)</div>
+          <p class="formation-desc">Formation spécialisée en sécurité informatique et protection des systèmes</p>
+          <div class="formation-bar green"></div>
+        </div>
+      </div>
+      <div class="formation-dot"></div>
+      <div class="formation-card-wrap right empty"></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="formation-stats">
+  <div class="formation-stat">
+    <span class="fstat-number blue">4+</span>
+    <span class="fstat-label">Formations</span>
+  </div>
+  <div class="formation-stat">
+    <span class="fstat-number pink">2</span>
+    <span class="fstat-label">En cours</span>
+  </div>
+  <div class="formation-stat">
+    <span class="fstat-number green">10+</span>
+    <span class="fstat-label">Technologies</span>
+  </div>
+  <div class="formation-stat">
+    <span class="fstat-number orange">100%</span>
+    <span class="fstat-label">Motivation</span>
+  </div>
+</div>
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="section-badge">Contact</div>
+  <h2>Travaillons Ensemble</h2>
+  <p class="section-sub">Vous avez un projet ? N'hésitez pas à me contacter.</p>
+  <div class="contact-section-grid">
+    <div class="contact-form">
+      <div class="form-group">
+        <label>Nom complet</label>
+        <input type="text" placeholder="Votre nom"/>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="votre@email.com"/>
+      </div>
+      <div class="form-group">
+        <label>Sujet</label>
+        <input type="text" placeholder="Objet de votre message"/>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Décrivez votre projet..."></textarea>
+      </div>
+      <button class="form-submit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Envoyer le message
+      </button>
+    </div>
+    <div class="contact-info-list">
+      <div class="contact-info-card">
+        <div class="contact-info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="contact-info-label">Téléphone</div>
+          <div class="contact-info-value">+225 50 52 56 49</div>
+        </div>
+      </div>
+      <div class="contact-info-card">
+        <div class="contact-info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <div class="contact-info-label">Email</div>
+          <div class="contact-info-value">christ.kadjo@ectbech.au</div>
+        </div>
+      </div>
+      <div class="contact-info-card">
+        <div class="contact-info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="contact-info-label">Localisation</div>
+          <div class="contact-info-value">Port Bouët, Côte d'Ivoire</div>
+        </div>
+      </div>
+      <div class="contact-info-card">
+        <div class="contact-info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </div>
+        <div>
+          <div class="contact-info-label">LinkedIn</div>
+          <div class="contact-info-value">linkedin.com/in/blin-kado-519b81138</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Kadjo Blin Ariel Christ Ebenezer. Tous droits réservés.</p>
+  <p>Développé avec ❤️ à Port Bouët, Côte d'Ivoire</p>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>
