@@ -1,0 +1,22 @@
+'Log files:
+/home/wecode/Rendu/portfolio/clean/_logs/2026-06-01T13_13_59_947Z-debug-0.log
+
+# npm resolution error report
+
+While resolving: portfolio@1.0.0
+Found: autoprefixer@undefined
+node_modules/autoprefixer
+  dev autoprefixer@"*" from the root project
+
+Could not resolve dependency:
+dev autoprefixer@"*" from the root project
+
+Conflicting peer dependency: postcss@8.5.15
+node_modules/postcss
+  peer postcss@"^8.1.0" from autoprefixer@10.5.0
+  node_modules/autoprefixer
+    dev autoprefixer@"*" from the root project
+
+Fix the upstream dependency conflict, or retry
+this command with --force or --legacy-peer-deps
+to accept an incorrect (and potentially broken) dependency resolution.

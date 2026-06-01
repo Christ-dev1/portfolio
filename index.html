@@ -6,365 +6,271 @@
   <title>Kadjo Blin Ariel Christ Ebenezer — Full Stack Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            'blue-dark': '#0f1b4d',
+            'blue-mid':  '#1a2a72',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .skill-bar-fill { width: 0; transition: width 1.2s cubic-bezier(0.4,0,0.2,1); }
+    .hero-dot-bg::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.07) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+    }
+    .cv-card-tilt {
+      transform: perspective(1000px) rotateY(-3deg) rotateX(2deg);
+      transform-origin: bottom center;
+    }
+    .formation-line-bg {
+      background: linear-gradient(180deg, #c7d2fe, #fbcfe8, #bbf7d0);
+    }
+  </style>
 </head>
-<body>
-
-
+<body class="font-sans bg-white text-gray-700 overflow-x-hidden">
 
 <!-- NAVBAR -->
-<nav>
-  <div class="nav-brand">
-    <div class="nav-avatar">K</div>
-    <div class="nav-brand-text">
-      <div class="nav-brand-name">Kadjo Ariel</div>
-      <div class="nav-brand-role">Full Stack Developer</div>
+<nav class="sticky top-0 z-50 bg-white border-b border-gray-200 px-8 flex items-center h-16 gap-4">
+  <div class="flex items-center gap-2.5 mr-6">
+    <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center font-bold text-white text-base shrink-0">K</div>
+    <div class="leading-tight">
+      <div class="font-bold text-sm text-gray-700">Kadjo Ariel</div>
+      <div class="text-xs text-gray-500">Full Stack Developer</div>
     </div>
   </div>
-  <div class="nav-links">
-    <a href="#hero" class="nav-link active">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+  <div class="hidden md:flex items-center gap-1 flex-1">
+    <a href="#hero" class="nav-link flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-medium text-white bg-blue-600 no-underline">
+      <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
       Accueil
     </a>
-    <a href="#about" class="nav-link">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    <a href="#about" class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 no-underline transition-colors">
+      <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
       À Propos
     </a>
-    <a href="#skills" class="nav-link">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+    <a href="#skills" class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 no-underline transition-colors">
+      <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
       Compétences
     </a>
-    <a href="#projects" class="nav-link">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+    <a href="#projects" class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 no-underline transition-colors">
+      <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
       Projets
     </a>
-    <a href="#formation" class="nav-link">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+    <a href="#formation" class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 no-underline transition-colors">
+      <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
       Formation
     </a>
-    <a href="#contact" class="nav-link">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    <a href="#contact" class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 no-underline transition-colors">
+      <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       Contact
     </a>
   </div>
-  <a href="#contact" class="nav-cta">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+  <a href="#contact" class="ml-auto flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm px-5 py-2 rounded-xl no-underline transition-colors whitespace-nowrap">
+    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
     Me Contacter
   </a>
 </nav>
 
 <!-- HERO -->
-<section id="hero">
-  <div class="hero-left">
-    <div class="hero-name-1">Kadjo Blin Ariel</div>
-    <div class="hero-name-2">Christ Ebenezer</div>
-    <div class="hero-role">Développeur Full Stack Junior</div>
-    <p class="hero-desc">
-      Passionné par le développement web moderne, spécialisé en Laravel, Vue.js et
-      React. J'aime créer des applications web élégantes et performantes qui
-      résolvent des problèmes réels.
+<section id="hero" class="hero-dot-bg min-h-[calc(100vh-64px)] relative overflow-hidden flex items-start gap-16 px-24 pt-16 pb-0" style="background: linear-gradient(135deg, #0f1b4d 0%, #1a2a72 40%, #1e3a8a 70%, #1d4ed8 100%);">
+  <div class="flex-1 pt-10 relative z-10">
+    <div class="text-4xl md:text-5xl font-extrabold text-white leading-tight">Kadjo Blin Ariel</div>
+    <div class="text-4xl md:text-5xl font-extrabold text-blue-300 leading-tight mb-4">Christ Ebenezer</div>
+    <div class="text-lg font-semibold text-white mb-5">Développeur Full Stack Junior</div>
+    <p class="text-sm font-light text-white/75 leading-relaxed max-w-lg mb-7">
+      Passionné par le développement web moderne, spécialisé en Laravel, Vue.js et React. J'aime créer des applications web élégantes et performantes qui résolvent des problèmes réels.
     </p>
-    <div class="hero-tags">
-      <span class="hero-tag">Laravel</span>
-      <span class="hero-tag">Vue.js</span>
-      <span class="hero-tag">React</span>
-      <span class="hero-tag">TypeScript</span>
-      <span class="hero-tag">MySQL</span>
-      <span class="hero-tag">MongoDB</span>
+    <div class="flex flex-wrap gap-2 mb-8">
+      <span class="px-3.5 py-1.5 border border-white/20 rounded-md text-xs font-medium text-white bg-white/[0.06]">Laravel</span>
+      <span class="px-3.5 py-1.5 border border-white/20 rounded-md text-xs font-medium text-white bg-white/[0.06]">Vue.js</span>
+      <span class="px-3.5 py-1.5 border border-white/20 rounded-md text-xs font-medium text-white bg-white/[0.06]">React</span>
+      <span class="px-3.5 py-1.5 border border-white/20 rounded-md text-xs font-medium text-white bg-white/[0.06]">TypeScript</span>
+      <span class="px-3.5 py-1.5 border border-white/20 rounded-md text-xs font-medium text-white bg-white/[0.06]">MySQL</span>
+      <span class="px-3.5 py-1.5 border border-white/20 rounded-md text-xs font-medium text-white bg-white/[0.06]">MongoDB</span>
     </div>
-    <div class="hero-buttons">
-      <a href="#" class="btn-hero-primary">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="17" height="17"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    <div class="flex gap-3 flex-wrap mb-10">
+      <a href="/image.png" download class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm px-6 py-3 rounded-xl no-underline transition-all hover:-translate-y-0.5">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        
         Télécharger mon CV
       </a>
-      <a href="#contact" class="btn-hero-outline">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="17" height="17"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <a href="#contact" class="inline-flex items-center gap-2 border border-white/30 text-white bg-white/[0.06] hover:bg-white/[0.12] font-semibold text-sm px-6 py-3 rounded-xl no-underline transition-all hover:-translate-y-0.5">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         Me contacter
       </a>
     </div>
-    <div class="hero-socials">
-      <span>Suivez-moi :</span>
-      <a href="https://github.com/votre-username" target="_blank" class="social-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+    <div class="flex items-center gap-2.5">
+      <span class="text-xs text-white/75 mr-1">Suivez-moi :</span>
+      <a href="https://github.com/votre-username" target="_blank" class="w-9 h-9 rounded-full border border-white/25 bg-white/[0.06] flex items-center justify-center text-white hover:bg-white/[0.18] hover:border-white/50 transition-all no-underline">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
       </a>
-      <a href="https://linkedin.com/in/blin-kado-519b81138" target="_blank" class="social-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      <a href="https://linkedin.com/in/blin-kado-519b81138" target="_blank" class="w-9 h-9 rounded-full border border-white/25 bg-white/[0.06] flex items-center justify-center text-white hover:bg-white/[0.18] hover:border-white/50 transition-all no-underline">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
       </a>
     </div>
   </div>
-
-  <!-- CV Preview Card -->
-  <div class="hero-right">
-    <div class="cv-card">
-      <div class="cv-header">
-        <div class="cv-avatar">KB</div>
-        <div class="cv-header-text">
-          <div class="cv-header-name">Kadjo Blin Ariel Christ</div>
-          <div class="cv-header-role">Développeur Web Full Stack Junior</div>
-        </div>
-      </div>
-      <div class="cv-body">
-        <div class="cv-section-title">Profil</div>
-        <p style="font-size:0.6rem;color:#6b7280;line-height:1.5;margin-bottom:6px;">
-          Développeur web full stack junior, j'ai acquis une expérience pratique à travers la réalisation de projets académiques et personnels. J'ai développé des applications web ainsi que des API en utilisant des technologies comme Laravel, Vue.js et React.
-        </p>
-        <div class="cv-section-title">Contacts</div>
-        <div class="cv-contact-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13"/></svg>
-          +225 01 50 50 58 60
-        </div>
-        <div class="cv-contact-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/></svg>
-          christ.kadjo@eptbech.au
-        </div>
-        <div class="cv-contact-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Port Bouët, Côte d'Ivoire
-        </div>
-        <div class="cv-section-title">Projets réalisés</div>
-        <div class="cv-project">
-          <div class="cv-project-name">● YOWL – Plateforme collaborative</div>
-          <div class="cv-project-desc">Technologies : Laravel, MySQL, TailwindCSS</div>
-        </div>
-        <div class="cv-project">
-          <div class="cv-project-name">● POST-IT APP</div>
-          <div class="cv-project-desc">Application de gestion de notes avec intégration API externe.</div>
-        </div>
-        <div class="cv-project">
-          <div class="cv-project-name">● Application e-commerce</div>
-          <div class="cv-project-desc">Technologies : PHP, MySQL, Laravel, HTML, CSS, TailwindCSS</div>
-        </div>
-        <div class="cv-project">
-          <div class="cv-project-name">● Showtime</div>
-          <div class="cv-project-desc">Technologies : React.js, Laravel, MongoDB, TailwindCSS</div>
-        </div>
-        <div class="cv-section-title">Compétences techniques</div>
-        <div class="cv-skills-group"><span class="cv-skills-label">Technologies : </span><span class="cv-skills-val">JavaScript, PHP</span></div>
-        <div class="cv-skills-group"><span class="cv-skills-label">Dev Web : </span><span class="cv-skills-val">React JS, Laravel, Vue JS, TailwindCSS, HTML5/CSS</span></div>
-        <div class="cv-skills-group"><span class="cv-skills-label">Base de données : </span><span class="cv-skills-val">MySQL, MongoDB</span></div>
-        <div class="cv-section-title">Formation</div>
-        <div class="cv-project">
-          <div class="cv-project-name">2025 – 2026 : Développeur Full Stack</div>
-          <div class="cv-project-desc">Formation professionnelle en développement web</div>
-        </div>
-      </div>
-    </div>
-    <div class="cv-available-badge">Disponible</div>
-  </div>
+<!-- CV CARD -->
+<div class="w-[380px] h-[560px] rounded-2xl overflow-hidden shadow-2xl">
+  <img 
+    src="/image.png" 
+    alt="CV"
+    class="w-full h-full object-cover object-top"
+  />
+</div>
 </section>
 
+
 <!-- CONTACT BAR -->
-<div class="contact-bar">
-  <div class="contact-bar-item">
-    <div class="contact-bar-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+<div class="bg-blue-mid px-24 py-7 flex justify-around gap-4" style="background:#1a2a72;">
+  <div class="flex items-center gap-4">
+    <div class="w-11 h-11 rounded-xl border border-white/20 bg-white/[0.06] flex items-center justify-center shrink-0">
+      <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
     </div>
     <div>
-      <div class="contact-bar-label">Téléphone</div>
-      <div class="contact-bar-value">+225 01 50 50 58 60/07 01 71 07 06</div>
+      <div class="text-xs text-white/60 mb-0.5">Téléphone</div>
+      <div class="text-sm font-semibold text-white">+225 01 50 50 58 60 / 07 01 71 07 06</div>
     </div>
   </div>
-  <div class="contact-bar-item">
-    <div class="contact-bar-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+  <div class="flex items-center gap-4">
+    <div class="w-11 h-11 rounded-xl border border-white/20 bg-white/[0.06] flex items-center justify-center shrink-0">
+      <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
     </div>
     <div>
-      <div class="contact-bar-label">Email</div>
-      <div class="contact-bar-value">christ.kadjo@epiech.eu</div>
+      <div class="text-xs text-white/60 mb-0.5">Email</div>
+      <div class="text-sm font-semibold text-white">christ.kadjo@epiech.eu</div>
     </div>
   </div>
-  <div class="contact-bar-item">
-    <div class="contact-bar-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+  <div class="flex items-center gap-4">
+    <div class="w-11 h-11 rounded-xl border border-white/20 bg-white/[0.06] flex items-center justify-center shrink-0">
+      <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
     </div>
     <div>
-      <div class="contact-bar-label">Localisation</div>
-      <div class="contact-bar-value">Port Bouët, Côte d'Ivoire</div>
+      <div class="text-xs text-white/60 mb-0.5">Localisation</div>
+      <div class="text-sm font-semibold text-white">Port Bouët, Côte d'Ivoire</div>
     </div>
   </div>
 </div>
 
 <!-- ABOUT -->
-<section id="about" class="section">
-  <div class="about-grid">
-   <div class="about-photo" style="padding:0; overflow:hidden;">
-  <img src="/57 copie(1).png" alt="Kadjo Blin Ariel"
-       style="width:100%; height:100%; object-fit:cover; object-position: top center;" />
-</div>
-    <div class="about-text">
-      <div class="section-badge">À Propos</div>
-      <h2>Kadjo Blin Ariel Christ Ebenezer</h2>
-      <p class="section-sub">Développeur Full Stack Junior passionné</p>
-      <p>
-        Développeur web full stack junior, j'ai acquis une expérience pratique à travers la réalisation de projets académiques et personnels. J'ai développé des applications web ainsi que des API en utilisant des technologies comme Laravel, Vue.js et React.
-      </p>
-      <p>
-        Curieux, rigoureux et motivé, je suis constamment en quête d'apprentissages et d'amélioration. Je souhaite aujourd'hui mettre mes compétences en pratique et évoluer au sein d'un environnement professionnel encadré.
-      </p>
-      <div class="about-info">
-        <div class="about-info-item">
-          <div class="about-info-label">Localisation</div>
-          <div class="about-info-value">Port Bouët, Côte d'Ivoire</div>
-        </div>
-        <div class="about-info-item">
-          <div class="about-info-label">Disponibilité</div>
-          <div class="about-info-value" style="color:#16a34a;">✓ Disponible</div>
-        </div>
-        <div class="about-info-item">
-          <div class="about-info-label">LinkedIn</div>
-          <div class="about-info-value" style="font-size:0.8rem;">linkedin.com/in/blin-kado</div>
-        </div>
-        <div class="about-info-item">
-          <div class="about-info-label">Langues</div>
-          <div class="about-info-value">Français · Anglais</div>
-        </div>
+<section id="about" class="py-20 px-24">
+  <div class="grid grid-cols-2 gap-16 items-center">
+    <div class="w-full aspect-[4/5] rounded-2xl overflow-hidden">
+      <img src="/57 copie(1).png" alt="Kadjo Blin Ariel" class="w-full h-full object-cover object-top"/>
+    </div>
+    <div>
+      <span class="inline-flex items-center gap-2 bg-blue-50 text-blue-600 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4 before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-blue-600">À Propos</span>
+      <h2 class="text-4xl font-extrabold text-gray-700 mb-2">Kadjo Blin Ariel Christ Ebenezer</h2>
+      <p class="text-gray-500 text-sm mb-4">Développeur Full Stack Junior passionné</p>
+      <p class="text-gray-500 text-sm leading-7 mb-4">Développeur web full stack junior, j'ai acquis une expérience pratique à travers la réalisation de projets académiques et personnels. J'ai développé des applications web ainsi que des API en utilisant des technologies comme Laravel, Vue.js et React.</p>
+      <p class="text-gray-500 text-sm leading-7 mb-6">Curieux, rigoureux et motivé, je suis constamment en quête d'apprentissages et d'amélioration. Je souhaite aujourd'hui mettre mes compétences en pratique et évoluer au sein d'un environnement professionnel encadré.</p>
+      <div class="grid grid-cols-2 gap-4 mt-6">
+        <div><div class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Localisation</div><div class="text-sm font-semibold text-gray-700 mt-0.5">Port Bouët, Côte d'Ivoire</div></div>
+        <div><div class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Disponibilité</div><div class="text-sm font-semibold text-green-600 mt-0.5">✓ Disponible</div></div>
+        <div><div class="text-xs font-semibold text-gray-500 uppercase tracking-wider">LinkedIn</div><div class="text-xs font-semibold text-gray-700 mt-0.5">linkedin.com/in/blin-kado</div></div>
+        <div><div class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Langues</div><div class="text-sm font-semibold text-gray-700 mt-0.5">Français · Anglais</div></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="section" style="background: #f3f4f6;">
-  <div style="text-align:center; margin-bottom:2.5rem;">
-    <div class="section-badge" style="display:inline-flex;">Expertise</div>
-    <h2 style="font-size:clamp(1.8rem,3vw,2.2rem);font-weight:800;color:var(--gray-700);margin-top:0.75rem;">Compétences Techniques</h2>
-    <div class="skills-underline"></div>
+<section id="skills" class="py-20 px-24 bg-gray-100">
+  <div class="text-center mb-10">
+    <span class="inline-flex items-center gap-2 bg-blue-50 text-blue-600 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full">Expertise</span>
+    <h2 class="text-4xl font-extrabold text-gray-700 mt-3 mb-2">Compétences Techniques</h2>
+    <div class="w-12 h-0.5 bg-blue-600 rounded mx-auto"></div>
   </div>
-  <div class="skills-grid">
-
+  <div class="grid grid-cols-2 gap-6">
     <!-- Frontend -->
-    <div class="skill-card">
-      <div class="skill-card-title"><span class="dot"></span>Frontend</div>
-      <div class="skill-bar-item">
-        <div class="skill-bar-label"><span>React.js</span><span>85%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
-      </div>
-      <div class="skill-bar-item">
-        <div class="skill-bar-label"><span>Vue.js</span><span>80%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
-      </div>
-      <div class="skill-bar-item">
-        <div class="skill-bar-label"><span>TypeScript</span><span>75%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
-      </div>
-      <div class="skill-bar-item">
-        <div class="skill-bar-label"><span>Tailwind CSS</span><span>90%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
-      </div>
-      <div class="skill-bar-item">
-        <div class="skill-bar-label"><span>JavaScript</span><span>85%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
-      </div>
+    <div class="bg-white border border-gray-200 rounded-2xl p-7 shadow-sm skill-card">
+      <div class="flex items-center gap-2 font-bold text-gray-700 mb-6"><span class="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></span>Frontend</div>
+      <div class="mb-4"><div class="flex justify-between text-sm text-gray-700 mb-1.5"><span>React.js</span><span class="text-gray-500 text-xs">85%</span></div><div class="h-1.5 rounded-full bg-[#e5e9f5] overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-blue-600 to-blue-400" data-width="85"></div></div></div>
+      <div class="mb-4"><div class="flex justify-between text-sm text-gray-700 mb-1.5"><span>Vue.js</span><span class="text-gray-500 text-xs">80%</span></div><div class="h-1.5 rounded-full bg-[#e5e9f5] overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-blue-600 to-blue-400" data-width="80"></div></div></div>
+      <div class="mb-4"><div class="flex justify-between text-sm text-gray-700 mb-1.5"><span>TypeScript</span><span class="text-gray-500 text-xs">75%</span></div><div class="h-1.5 rounded-full bg-[#e5e9f5] overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-blue-600 to-blue-400" data-width="75"></div></div></div>
+      <div class="mb-4"><div class="flex justify-between text-sm text-gray-700 mb-1.5"><span>Tailwind CSS</span><span class="text-gray-500 text-xs">90%</span></div><div class="h-1.5 rounded-full bg-[#e5e9f5] overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-blue-600 to-blue-400" data-width="90"></div></div></div>
+      <div><div class="flex justify-between text-sm text-gray-700 mb-1.5"><span>JavaScript</span><span class="text-gray-500 text-xs">85%</span></div><div class="h-1.5 rounded-full bg-[#e5e9f5] overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-blue-600 to-blue-400" data-width="85"></div></div></div>
     </div>
-
     <!-- Backend -->
-    <div class="skill-card">
-      <div class="skill-card-title"><span class="dot"></span>Backend</div>
-      <div class="skill-bar-item">
-        <div class="skill-bar-label"><span>Laravel</span><span>85%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
-      </div>
-      <div class="skill-bar-item">
-        <div class="skill-bar-label"><span>PHP</span><span>80%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
-      </div>
-      <div class="skill-bar-item">
-        <div class="skill-bar-label"><span>Node.js</span><span>70%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
-      </div>
-      <div class="skill-bar-item">
-        <div class="skill-bar-label"><span>API REST</span><span>85%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
-      </div>
+    <div class="bg-white border border-gray-200 rounded-2xl p-7 shadow-sm skill-card">
+      <div class="flex items-center gap-2 font-bold text-gray-700 mb-6"><span class="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></span>Backend</div>
+      <div class="mb-4"><div class="flex justify-between text-sm text-gray-700 mb-1.5"><span>Laravel</span><span class="text-gray-500 text-xs">85%</span></div><div class="h-1.5 rounded-full bg-[#e5e9f5] overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-blue-600 to-blue-400" data-width="85"></div></div></div>
+      <div class="mb-4"><div class="flex justify-between text-sm text-gray-700 mb-1.5"><span>PHP</span><span class="text-gray-500 text-xs">80%</span></div><div class="h-1.5 rounded-full bg-[#e5e9f5] overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-blue-600 to-blue-400" data-width="80"></div></div></div>
+      <div class="mb-4"><div class="flex justify-between text-sm text-gray-700 mb-1.5"><span>Node.js</span><span class="text-gray-500 text-xs">70%</span></div><div class="h-1.5 rounded-full bg-[#e5e9f5] overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-blue-600 to-blue-400" data-width="70"></div></div></div>
+      <div><div class="flex justify-between text-sm text-gray-700 mb-1.5"><span>API REST</span><span class="text-gray-500 text-xs">85%</span></div><div class="h-1.5 rounded-full bg-[#e5e9f5] overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-blue-600 to-blue-400" data-width="85"></div></div></div>
     </div>
 
-    <!-- Base de données -->
-    <div class="skill-card">
-      <div class="skill-card-title"><span class="dot"></span>Base de données</div>
-      <div class="skill-bar-item">
-        <div class="skill-bar-label"><span>MySQL</span><span>80%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
-      </div>
-      <div class="skill-bar-item">
-        <div class="skill-bar-label"><span>MongoDB</span><span>75%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
-      </div>
-      <div class="skill-bar-item">
-        <div class="skill-bar-label"><span>Mongoose</span><span>70%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
-      </div>
+    <div class="bg-white border border-gray-200 rounded-2xl p-7 shadow-sm skill-card">
+      <div class="flex items-center gap-2 font-bold text-gray-700 mb-6"><span class="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></span>Base de données</div>
+      <div class="mb-4"><div class="flex justify-between text-sm text-gray-700 mb-1.5"><span>MySQL</span><span class="text-gray-500 text-xs">80%</span></div><div class="h-1.5 rounded-full bg-[#e5e9f5] overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-blue-600 to-blue-400" data-width="80"></div></div></div>
+      <div class="mb-4"><div class="flex justify-between text-sm text-gray-700 mb-1.5"><span>MongoDB</span><span class="text-gray-500 text-xs">75%</span></div><div class="h-1.5 rounded-full bg-[#e5e9f5] overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-blue-600 to-blue-400" data-width="75"></div></div></div>
+      <div><div class="flex justify-between text-sm text-gray-700 mb-1.5"><span>Mongoose</span><span class="text-gray-500 text-xs">70%</span></div><div class="h-1.5 rounded-full bg-[#e5e9f5] overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-blue-600 to-blue-400" data-width="70"></div></div></div>
     </div>
-
-    <!-- Outils & DevOps -->
-    <div class="skill-card">
-      <div class="skill-card-title"><span class="dot"></span>Outils &amp; DevOps</div>
-      <div class="skill-bar-item">
-        <div class="skill-bar-label"><span>Git/GitHub</span><span>85%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill pink" data-width="85"></div></div>
-      </div>
-      <div class="skill-bar-item">
-        <div class="skill-bar-label"><span>VS Code</span><span>90%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill pink" data-width="90"></div></div>
-      </div>
-      <div class="skill-bar-item">
-        <div class="skill-bar-label"><span>Postman</span><span>80%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill pink" data-width="80"></div></div>
-      </div>
-      <div class="skill-bar-item">
-        <div class="skill-bar-label"><span>Trello</span><span>75%</span></div>
-        <div class="skill-bar-track"><div class="skill-bar-fill pink" data-width="75"></div></div>
-      </div>
+    <!-- Outils -->
+    <div class="bg-white border border-gray-200 rounded-2xl p-7 shadow-sm skill-card">
+      <div class="flex items-center gap-2 font-bold text-gray-700 mb-6"><span class="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></span>Outils &amp; DevOps</div>
+      <div class="mb-4"><div class="flex justify-between text-sm text-gray-700 mb-1.5"><span>Git/GitHub</span><span class="text-gray-500 text-xs">85%</span></div><div class="h-1.5 rounded-full bg-[#e5e9f5] overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-blue-600 to-pink-500" data-width="85"></div></div></div>
+      <div class="mb-4"><div class="flex justify-between text-sm text-gray-700 mb-1.5"><span>VS Code</span><span class="text-gray-500 text-xs">90%</span></div><div class="h-1.5 rounded-full bg-[#e5e9f5] overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-blue-600 to-pink-500" data-width="90"></div></div></div>
+      <div class="mb-4"><div class="flex justify-between text-sm text-gray-700 mb-1.5"><span>Postman</span><span class="text-gray-500 text-xs">80%</span></div><div class="h-1.5 rounded-full bg-[#e5e9f5] overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-blue-600 to-pink-500" data-width="80"></div></div></div>
+      <div><div class="flex justify-between text-sm text-gray-700 mb-1.5"><span>Trello</span><span class="text-gray-500 text-xs">75%</span></div><div class="h-1.5 rounded-full bg-[#e5e9f5] overflow-hidden"><div class="skill-bar-fill h-full rounded-full bg-gradient-to-r from-blue-600 to-pink-500" data-width="75"></div></div></div>
     </div>
-
   </div>
 </section>
 
 <!-- PROJECTS -->
-<!-- PROJECTS -->
-<section id="projects" class="section">
-  <div style="text-align:center; margin-bottom:3rem;">
-    <div class="section-badge" style="display:inline-flex;">Projets</div>
-    <h2 style="font-size:clamp(1.8rem,3vw,2.2rem);font-weight:800;color:var(--gray-700);margin-top:0.75rem;">Projets Réalisés</h2>
-    <div class="skills-underline"></div>
-    <p class="section-sub">Découvrez une sélection de mes projets réalisés en développement web full-stack</p>
+<section id="projects" class="py-20 px-24 bg-white">
+  <div class="text-center mb-12">
+    <span class="inline-flex items-center gap-2 bg-blue-50 text-blue-600 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full">Projets</span>
+    <h2 class="text-4xl font-extrabold text-gray-700 mt-3 mb-2">Projets Réalisés</h2>
+    <div class="w-12 h-0.5 bg-blue-600 rounded mx-auto mb-3"></div>
+    <p class="text-gray-500 text-sm">Découvrez une sélection de mes projets réalisés en développement web full-stack</p>
   </div>
-
-  <div class="projects-grid">
+  <div class="grid grid-cols-2 gap-6 max-w-5xl mx-auto">
 
     <!-- YOWL -->
-    <div class="project-card-v2 card-blue">
-      <div class="project-card-top">
-        <div class="project-card-head">
-          <div class="project-icon blue">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+    <div class="rounded-2xl border border-gray-200 overflow-hidden bg-white hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+      <div class="bg-blue-50 p-6 pb-5">
+        <div class="flex justify-between items-start mb-4">
+          <div class="w-11 h-11 rounded-xl bg-blue-500 flex items-center justify-center text-white shrink-0">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
-          <span class="project-num">#01</span>
+          <span class="text-xs font-semibold text-gray-400">#01</span>
         </div>
-        <h3 class="project-name">YOWL – Plateforme Collaborative</h3>
-        <p class="project-desc">Système de partage de liens avec génération automatique d'aperçus. Backend robuste et intégration frontend.</p>
+        <h3 class="text-base font-bold text-gray-900 mb-1">YOWL – Plateforme Collaborative</h3>
+        <p class="text-xs text-gray-500 leading-relaxed">Système de partage de liens avec génération automatique d'aperçus.</p>
       </div>
-      <div class="project-card-bottom">
-        <div class="project-tech-label">Technologies utilisées</div>
-        <div class="project-tags">
-          <span class="project-tag">Laravel</span>
-          <span class="project-tag">MySQL</span>
-          <span class="project-tag">TailwindCSS</span>
-          <span class="project-tag">API REST</span>
+      <div class="p-6 pt-4 border-t border-gray-100">
+        <div class="text-[10px] font-medium uppercase tracking-wider text-gray-400 mb-2">Technologies utilisées</div>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="text-xs px-2.5 py-0.5 rounded-full border border-gray-200 bg-gray-50 text-gray-700">Laravel</span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full border border-gray-200 bg-gray-50 text-gray-700">MySQL</span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full border border-gray-200 bg-gray-50 text-gray-700">TailwindCSS</span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full border border-gray-200 bg-gray-50 text-gray-700">API REST</span>
         </div>
-        <div class="project-features-label">Fonctionnalités clés</div>
-        <ul class="project-features">
-          <li>Architecture backend robuste avec Laravel</li>
-          <li>Système de gestion des utilisateurs et permissions</li>
-          <li>Génération automatique d'aperçus de liens</li>
-          <li>API RESTful pour l'intégration frontend</li>
+        <div class="text-[10px] font-medium uppercase tracking-wider text-gray-400 mb-2">Fonctionnalités clés</div>
+        <ul class="mb-5 space-y-1">
+          <li class="flex items-start gap-2 text-xs text-gray-700"><span class="text-blue-500 mt-1 text-[8px]">●</span>Architecture backend robuste avec Laravel</li>
+          <li class="flex items-start gap-2 text-xs text-gray-700"><span class="text-blue-500 mt-1 text-[8px]">●</span>Système de gestion des utilisateurs et permissions</li>
+          <li class="flex items-start gap-2 text-xs text-gray-700"><span class="text-blue-500 mt-1 text-[8px]">●</span>Génération automatique d'aperçus de liens</li>
+          <li class="flex items-start gap-2 text-xs text-gray-700"><span class="text-blue-500 mt-1 text-[8px]">●</span>API RESTful pour l'intégration frontend</li>
         </ul>
-        <div class="project-links-v2">
-          <a href="#" class="project-btn-outline">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77A5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        <div class="grid grid-cols-2 gap-2">
+          <a href="#" class="flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-semibold border border-gray-200 text-gray-700 bg-white hover:bg-gray-50 no-underline transition-colors">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
             Code
           </a>
-          <a href="#" class="project-btn-primary blue">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <a href="#" class="flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-semibold text-white bg-gradient-to-r from-blue-500 to-blue-700 no-underline hover:opacity-90 transition-opacity">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             Démo
           </a>
         </div>
@@ -372,102 +278,102 @@
     </div>
 
     <!-- POST-IT -->
-    <div class="project-card-v2 card-pink">
-      <div class="project-card-top">
-        <div class="project-card-head">
-          <div class="project-icon pink">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+    <div class="rounded-2xl border border-gray-200 overflow-hidden bg-white hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+      <div class="bg-pink-50 p-6 pb-5">
+        <div class="flex justify-between items-start mb-4">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center text-white shrink-0" style="background:linear-gradient(135deg,#ec4899,#a855f7)">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           </div>
-          <span class="project-num">#02</span>
+          <span class="text-xs font-semibold text-gray-400">#02</span>
         </div>
-        <h3 class="project-name">Post-It App</h3>
-        <p class="project-desc">Application moderne de gestion de notes avec intégration d'API externe et interface utilisateur intuitive.</p>
+        <h3 class="text-base font-bold text-gray-900 mb-1">Post-It App</h3>
+        <p class="text-xs text-gray-500 leading-relaxed">Application moderne de gestion de notes avec intégration d'API externe.</p>
       </div>
-      <div class="project-card-bottom">
-        <div class="project-tech-label">Technologies utilisées</div>
-        <div class="project-tags">
-          <span class="project-tag">Vue.js</span>
-          <span class="project-tag">API RESTful</span>
-          <span class="project-tag">TailwindCSS</span>
+      <div class="p-6 pt-4 border-t border-gray-100">
+        <div class="text-[10px] font-medium uppercase tracking-wider text-gray-400 mb-2">Technologies utilisées</div>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="text-xs px-2.5 py-0.5 rounded-full border border-gray-200 bg-gray-50 text-gray-700">Vue.js</span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full border border-gray-200 bg-gray-50 text-gray-700">API RESTful</span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full border border-gray-200 bg-gray-50 text-gray-700">TailwindCSS</span>
         </div>
-        <div class="project-features-label">Fonctionnalités clés</div>
-        <ul class="project-features">
-          <li>CRUD complet pour la gestion de notes</li>
-          <li>Intégration d'API externe sécurisée</li>
-          <li>Interface responsive et accessible</li>
-          <li>State management optimisé</li>
+        <div class="text-[10px] font-medium uppercase tracking-wider text-gray-400 mb-2">Fonctionnalités clés</div>
+        <ul class="mb-5 space-y-1">
+          <li class="flex items-start gap-2 text-xs text-gray-700"><span class="text-pink-500 mt-1 text-[8px]">●</span>CRUD complet pour la gestion de notes</li>
+          <li class="flex items-start gap-2 text-xs text-gray-700"><span class="text-pink-500 mt-1 text-[8px]">●</span>Intégration d'API externe sécurisée</li>
+          <li class="flex items-start gap-2 text-xs text-gray-700"><span class="text-pink-500 mt-1 text-[8px]">●</span>Interface responsive et accessible</li>
+          <li class="flex items-start gap-2 text-xs text-gray-700"><span class="text-pink-500 mt-1 text-[8px]">●</span>State management optimisé</li>
         </ul>
-        <div class="project-links-v2">
-          <a href="#" class="project-btn-outline">Code</a>
-          <a href="#" class="project-btn-primary pink">Démo</a>
+        <div class="grid grid-cols-2 gap-2">
+          <a href="#" class="flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-semibold border border-gray-200 text-gray-700 bg-white hover:bg-gray-50 no-underline transition-colors">Code</a>
+          <a href="#" class="flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-semibold text-white no-underline hover:opacity-90 transition-opacity" style="background:linear-gradient(135deg,#ec4899,#a855f7)">Démo</a>
         </div>
       </div>
     </div>
 
     <!-- E-COMMERCE -->
-    <div class="project-card-v2 card-green">
-      <div class="project-card-top">
-        <div class="project-card-head">
-          <div class="project-icon green">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+    <div class="rounded-2xl border border-gray-200 overflow-hidden bg-white hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+      <div class="bg-green-50 p-6 pb-5">
+        <div class="flex justify-between items-start mb-4">
+          <div class="w-11 h-11 rounded-xl bg-green-500 flex items-center justify-center text-white shrink-0">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
           </div>
-          <span class="project-num">#03</span>
+          <span class="text-xs font-semibold text-gray-400">#03</span>
         </div>
-        <h3 class="project-name">Application E-Commerce</h3>
-        <p class="project-desc">Développement full stack d'une boutique en ligne avec fonctionnalités CRUD et interface responsive.</p>
+        <h3 class="text-base font-bold text-gray-900 mb-1">Application E-Commerce</h3>
+        <p class="text-xs text-gray-500 leading-relaxed">Développement full stack d'une boutique en ligne avec CRUD et interface responsive.</p>
       </div>
-      <div class="project-card-bottom">
-        <div class="project-tech-label">Technologies utilisées</div>
-        <div class="project-tags">
-          <span class="project-tag">PHP</span>
-          <span class="project-tag">Laravel</span>
-          <span class="project-tag">MySQL</span>
-          <span class="project-tag">TailwindCSS</span>
+      <div class="p-6 pt-4 border-t border-gray-100">
+        <div class="text-[10px] font-medium uppercase tracking-wider text-gray-400 mb-2">Technologies utilisées</div>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="text-xs px-2.5 py-0.5 rounded-full border border-gray-200 bg-gray-50 text-gray-700">PHP</span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full border border-gray-200 bg-gray-50 text-gray-700">Laravel</span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full border border-gray-200 bg-gray-50 text-gray-700">MySQL</span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full border border-gray-200 bg-gray-50 text-gray-700">TailwindCSS</span>
         </div>
-        <div class="project-features-label">Fonctionnalités clés</div>
-        <ul class="project-features">
-          <li>Gestion complète des produits et catégories</li>
-          <li>Interface responsive et accessible</li>
-          <li>Gestion de la base de données relationnelle</li>
-          <li>Système d'authentification sécurisé</li>
+        <div class="text-[10px] font-medium uppercase tracking-wider text-gray-400 mb-2">Fonctionnalités clés</div>
+        <ul class="mb-5 space-y-1">
+          <li class="flex items-start gap-2 text-xs text-gray-700"><span class="text-green-500 mt-1 text-[8px]">●</span>Gestion complète des produits et catégories</li>
+          <li class="flex items-start gap-2 text-xs text-gray-700"><span class="text-green-500 mt-1 text-[8px]">●</span>Interface responsive multi-appareils</li>
+          <li class="flex items-start gap-2 text-xs text-gray-700"><span class="text-green-500 mt-1 text-[8px]">●</span>Gestion base de données relationnelle</li>
+          <li class="flex items-start gap-2 text-xs text-gray-700"><span class="text-green-500 mt-1 text-[8px]">●</span>Système d'authentification sécurisé</li>
         </ul>
-        <div class="project-links-v2">
-          <a href="#" class="project-btn-outline">Code</a>
-          <a href="#" class="project-btn-primary green">Démo</a>
+        <div class="grid grid-cols-2 gap-2">
+          <a href="#" class="flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-semibold border border-gray-200 text-gray-700 bg-white hover:bg-gray-50 no-underline transition-colors">Code</a>
+          <a href="#" class="flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-semibold text-white no-underline hover:opacity-90 transition-opacity bg-gradient-to-r from-green-500 to-green-700">Démo</a>
         </div>
       </div>
     </div>
 
     <!-- SHOWTIME -->
-    <div class="project-card-v2 card-orange">
-      <div class="project-card-top">
-        <div class="project-card-head">
-          <div class="project-icon orange">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+    <div class="rounded-2xl border border-gray-200 overflow-hidden bg-white hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+      <div class="bg-orange-50 p-6 pb-5">
+        <div class="flex justify-between items-start mb-4">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center text-white shrink-0" style="background:linear-gradient(135deg,#f97316,#ef4444)">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
           </div>
-          <span class="project-num">#04</span>
+          <span class="text-xs font-semibold text-gray-400">#04</span>
         </div>
-        <h3 class="project-name">Showtime</h3>
-        <p class="project-desc">Plateforme de gestion de réservations de tickets d'événements. Full stack avec API REST.</p>
+        <h3 class="text-base font-bold text-gray-900 mb-1">Showtime</h3>
+        <p class="text-xs text-gray-500 leading-relaxed">Plateforme de gestion de réservations de tickets d'événements.</p>
       </div>
-      <div class="project-card-bottom">
-        <div class="project-tech-label">Technologies utilisées</div>
-        <div class="project-tags">
-          <span class="project-tag">React.js</span>
-          <span class="project-tag">Laravel</span>
-          <span class="project-tag">MongoDB</span>
-          <span class="project-tag">TailwindCSS</span>
+      <div class="p-6 pt-4 border-t border-gray-100">
+        <div class="text-[10px] font-medium uppercase tracking-wider text-gray-400 mb-2">Technologies utilisées</div>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="text-xs px-2.5 py-0.5 rounded-full border border-gray-200 bg-gray-50 text-gray-700">React.js</span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full border border-gray-200 bg-gray-50 text-gray-700">Laravel</span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full border border-gray-200 bg-gray-50 text-gray-700">MongoDB</span>
+          <span class="text-xs px-2.5 py-0.5 rounded-full border border-gray-200 bg-gray-50 text-gray-700">TailwindCSS</span>
         </div>
-        <div class="project-features-label">Fonctionnalités clés</div>
-        <ul class="project-features">
-          <li>Gestion des réservations en temps réel</li>
-          <li>API REST performante avec Laravel</li>
-          <li>Base de données MongoDB flexible</li>
-          <li>Interface React.js moderne</li>
+        <div class="text-[10px] font-medium uppercase tracking-wider text-gray-400 mb-2">Fonctionnalités clés</div>
+        <ul class="mb-5 space-y-1">
+          <li class="flex items-start gap-2 text-xs text-gray-700"><span class="text-orange-500 mt-1 text-[8px]">●</span>Gestion des réservations en temps réel</li>
+          <li class="flex items-start gap-2 text-xs text-gray-700"><span class="text-orange-500 mt-1 text-[8px]">●</span>API REST performante avec Laravel</li>
+          <li class="flex items-start gap-2 text-xs text-gray-700"><span class="text-orange-500 mt-1 text-[8px]">●</span>Base de données MongoDB flexible</li>
+          <li class="flex items-start gap-2 text-xs text-gray-700"><span class="text-orange-500 mt-1 text-[8px]">●</span>Interface React.js moderne</li>
         </ul>
-        <div class="project-links-v2">
-          <a href="#" class="project-btn-outline">Code</a>
-          <a href="#" class="project-btn-primary orange">Démo</a>
+        <div class="grid grid-cols-2 gap-2">
+          <a href="#" class="flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-semibold border border-gray-200 text-gray-700 bg-white hover:bg-gray-50 no-underline transition-colors">Code</a>
+          <a href="#" class="flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-semibold text-white no-underline hover:opacity-90 transition-opacity" style="background:linear-gradient(135deg,#f97316,#ef4444)">Démo</a>
         </div>
       </div>
     </div>
@@ -476,181 +382,196 @@
 </section>
 
 <!-- FORMATION -->
-<!-- FORMATION -->
-<section id="formation" class="section">
-  <div class="section-badge">Formation</div>
-  <h2>Parcours de Formation</h2>
-  <p class="section-sub">Mon parcours académique et professionnel.</p>
+<section id="formation" class="py-20 px-24 bg-gray-100">
+  <span class="inline-flex items-center gap-2 bg-blue-50 text-blue-600 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4">Formation</span>
+  <h2 class="text-4xl font-extrabold text-gray-700 mb-2">Parcours de Formation</h2>
+  <p class="text-gray-500 text-sm mb-6">Mon parcours académique et professionnel.</p>
 
-  <div class="formation-timeline">
+  <!-- Stats -->
+  <div class="flex justify-center gap-16 bg-white rounded-2xl p-6 mb-12 shadow-sm">
+    <div class="flex flex-col items-center gap-1">
+      <span class="text-4xl font-extrabold text-blue-500 leading-none">4+</span>
+      <span class="text-sm text-gray-500 font-medium">Formations</span>
+    </div>
+    <div class="flex flex-col items-center gap-1">
+      <span class="text-4xl font-extrabold text-pink-500 leading-none">2</span>
+      <span class="text-sm text-gray-500 font-medium">En cours</span>
+    </div>
+    <div class="flex flex-col items-center gap-1">
+      <span class="text-4xl font-extrabold text-emerald-500 leading-none">10+</span>
+      <span class="text-sm text-gray-500 font-medium">Technologies</span>
+    </div>
+    <div class="flex flex-col items-center gap-1">
+      <span class="text-4xl font-extrabold text-orange-500 leading-none">100%</span>
+      <span class="text-sm text-gray-500 font-medium">Motivation</span>
+    </div>
+  </div>
 
+  <!-- Timeline -->
+  <div class="relative flex flex-col gap-10">
     <!-- Ligne centrale -->
-    <div class="formation-line"></div>
+    <div class="absolute left-1/2 top-0 bottom-0 w-0.5 formation-line-bg -translate-x-1/2 z-0"></div>
 
     <!-- Item gauche -->
-    <div class="formation-row">
-      <div class="formation-card-wrap left">
-        <div class="formation-card">
-          <div class="formation-card-head">
-            <div class="formation-icon blue">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            </div>
-            <div class="formation-meta">
-              <span class="formation-date">2025 – 2026</span>
-              <span class="formation-badge encours">En cours</span>
-            </div>
+    <div class="grid grid-cols-[1fr_24px_1fr] items-center gap-6 relative z-10">
+      <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+        <div class="flex justify-between items-start mb-4">
+          <div class="w-11 h-11 rounded-xl bg-blue-500 flex items-center justify-center text-white shrink-0">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           </div>
-          <h3 class="formation-title">Développement Full Stack</h3>
-          <div class="formation-school">Programme WECODE</div>
-          <p class="formation-desc">Formation intensive en développement web moderne avec Laravel, Vue.js, React et méthodologie Agile</p>
-          <div class="formation-bar blue"></div>
+          <div class="flex flex-col items-end gap-1">
+            <span class="text-xs font-semibold text-gray-500">2025 – 2026</span>
+            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-green-100 text-green-700">En cours</span>
+          </div>
         </div>
+        <h3 class="font-bold text-gray-700 mb-0.5">Développement Full Stack</h3>
+        <div class="text-sm font-medium text-blue-600 mb-2">Programme WECODE</div>
+        <p class="text-xs text-gray-500 leading-relaxed mb-4">Formation intensive en développement web moderne avec Laravel, Vue.js, React et méthodologie Agile</p>
+        <div class="h-0.5 w-12 rounded-full" style="background:linear-gradient(90deg,#6366f1,#8b5cf6)"></div>
       </div>
-      <div class="formation-dot"></div>
-      <div class="formation-card-wrap right empty"></div>
+      <div class="w-4 h-4 rounded-full border-2 border-blue-600 bg-white justify-self-center shrink-0"></div>
+      <div class="invisible"></div>
     </div>
 
     <!-- Item droite -->
-    <div class="formation-row">
-      <div class="formation-card-wrap left empty"></div>
-      <div class="formation-dot"></div>
-      <div class="formation-card-wrap right">
-        <div class="formation-card">
-          <div class="formation-card-head">
-            <div class="formation-icon pink">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            </div>
-            <div class="formation-meta">
-              <span class="formation-date">2025</span>
-              <span class="formation-badge encours">En cours</span>
-            </div>
+    <div class="grid grid-cols-[1fr_24px_1fr] items-center gap-6 relative z-10">
+      <div class="invisible"></div>
+      <div class="w-4 h-4 rounded-full border-2 border-blue-600 bg-white justify-self-center shrink-0"></div>
+      <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+        <div class="flex justify-between items-start mb-4">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center text-white shrink-0" style="background:linear-gradient(135deg,#ec4899,#a855f7)">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
           </div>
-          <h3 class="formation-title">Licence 1</h3>
-          <div class="formation-school">Université Virtuelle de Côte d'Ivoire</div>
-          <p class="formation-desc">Cursus universitaire en cours - Formation académique fondamentale</p>
-          <div class="formation-bar pink"></div>
+          <div class="flex flex-col items-end gap-1">
+            <span class="text-xs font-semibold text-gray-500">2025</span>
+            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-green-100 text-green-700">En cours</span>
+          </div>
         </div>
+        <h3 class="font-bold text-gray-700 mb-0.5">Licence 1</h3>
+        <div class="text-sm font-medium text-blue-600 mb-2">Université Virtuelle de Côte d'Ivoire</div>
+        <p class="text-xs text-gray-500 leading-relaxed mb-4">Cursus universitaire en cours - Formation académique fondamentale</p>
+        <div class="h-0.5 w-12 rounded-full" style="background:linear-gradient(90deg,#3b82f6,#8b5cf6)"></div>
       </div>
     </div>
 
     <!-- Item gauche -->
-    <div class="formation-row">
-      <div class="formation-card-wrap left">
-        <div class="formation-card">
-          <div class="formation-card-head">
-            <div class="formation-icon green">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <div class="formation-meta">
-              <span class="formation-date">2024 – 2025</span>
-              <span class="formation-badge complete">Complété</span>
-            </div>
+    <div class="grid grid-cols-[1fr_24px_1fr] items-center gap-6 relative z-10">
+      <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+        <div class="flex justify-between items-start mb-4">
+          <div class="w-11 h-11 rounded-xl bg-emerald-500 flex items-center justify-center text-white shrink-0">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
-          <h3 class="formation-title">Formation en Cybersécurité Digitale</h3>
-          <div class="formation-school">ITworx Academy (Kodal)</div>
-          <p class="formation-desc">Formation spécialisée en sécurité informatique et protection des systèmes</p>
-          <div class="formation-bar green"></div>
+          <div class="flex flex-col items-end gap-1">
+            <span class="text-xs font-semibold text-gray-500">2024 – 2025</span>
+            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-500">Complété</span>
+          </div>
         </div>
+        <h3 class="font-bold text-gray-700 mb-0.5">Formation en Cybersécurité Digitale</h3>
+        <div class="text-sm font-medium text-blue-600 mb-2">ITworx Academy (Kodal)</div>
+        <p class="text-xs text-gray-500 leading-relaxed mb-4">Formation spécialisée en sécurité informatique et protection des systèmes</p>
+        <div class="h-0.5 w-12 rounded-full" style="background:linear-gradient(90deg,#6366f1,#8b5cf6)"></div>
       </div>
-      <div class="formation-dot"></div>
-      <div class="formation-card-wrap right empty"></div>
+      <div class="w-4 h-4 rounded-full border-2 border-blue-600 bg-white justify-self-center shrink-0"></div>
+      <div class="invisible"></div>
     </div>
 
   </div>
 </section>
 
-<div class="formation-stats">
-  <div class="formation-stat">
-    <span class="fstat-number blue">4+</span>
-    <span class="fstat-label">Formations</span>
-  </div>
-  <div class="formation-stat">
-    <span class="fstat-number pink">2</span>
-    <span class="fstat-label">En cours</span>
-  </div>
-  <div class="formation-stat">
-    <span class="fstat-number green">10+</span>
-    <span class="fstat-label">Technologies</span>
-  </div>
-  <div class="formation-stat">
-    <span class="fstat-number orange">100%</span>
-    <span class="fstat-label">Motivation</span>
-  </div>
-</div>
 <!-- CONTACT -->
-<section id="contact" class="section">
-  <div class="section-badge">Contact</div>
-  <h2>Travaillons Ensemble</h2>
-  <p class="section-sub">Vous avez un projet ? N'hésitez pas à me contacter.</p>
-  <div class="contact-section-grid">
-    <div class="contact-form">
-      <div class="form-group">
-        <label>Nom complet</label>
-        <input type="text" placeholder="Votre nom"/>
+<section id="contact" class="py-20 px-24 bg-white">
+  <span class="inline-flex items-center gap-2 bg-blue-50 text-blue-600 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4">Contact</span>
+  <h2 class="text-4xl font-extrabold text-gray-700 mb-2">Travaillons Ensemble</h2>
+  <p class="text-gray-500 text-sm mb-10">Vous avez un projet ? N'hésitez pas à me contacter.</p>
+  <div class="grid grid-cols-2 gap-12 items-start">
+    <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-1.5">
+        <label class="text-xs font-semibold text-gray-700">Nom complet</label>
+        <input type="text" placeholder="Votre nom" class="px-4 py-2.5 border border-gray-200 rounded-xl text-sm text-gray-700 outline-none focus:border-blue-600 transition-colors"/>
       </div>
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" placeholder="votre@email.com"/>
+      <div class="flex flex-col gap-1.5">
+        <label class="text-xs font-semibold text-gray-700">Email</label>
+        <input type="email" placeholder="votre@email.com" class="px-4 py-2.5 border border-gray-200 rounded-xl text-sm text-gray-700 outline-none focus:border-blue-600 transition-colors"/>
       </div>
-      <div class="form-group">
-        <label>Sujet</label>
-        <input type="text" placeholder="Objet de votre message"/>
+      <div class="flex flex-col gap-1.5">
+        <label class="text-xs font-semibold text-gray-700">Sujet</label>
+        <input type="text" placeholder="Objet de votre message" class="px-4 py-2.5 border border-gray-200 rounded-xl text-sm text-gray-700 outline-none focus:border-blue-600 transition-colors"/>
       </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea placeholder="Décrivez votre projet..."></textarea>
+      <div class="flex flex-col gap-1.5">
+        <label class="text-xs font-semibold text-gray-700">Message</label>
+        <textarea placeholder="Décrivez votre projet..." rows="5" class="px-4 py-2.5 border border-gray-200 rounded-xl text-sm text-gray-700 outline-none focus:border-blue-600 transition-colors resize-y"></textarea>
       </div>
-      <button class="form-submit">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      <button class="self-start inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm px-7 py-3 rounded-xl border-none cursor-pointer transition-colors">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
         Envoyer le message
       </button>
     </div>
-    <div class="contact-info-list">
-      <div class="contact-info-card">
-        <div class="contact-info-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <div class="flex flex-col gap-4">
+      <div class="flex items-center gap-4 bg-white border border-gray-200 rounded-xl px-5 py-4">
+        <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         </div>
-        <div>
-          <div class="contact-info-label">Téléphone</div>
-          <div class="contact-info-value">+225 50 52 56 49</div>
-        </div>
+        <div><div class="text-xs text-gray-500 mb-0.5">Téléphone</div><div class="text-sm font-semibold text-gray-700">+225 01 50 50 58 60</div></div>
       </div>
-      <div class="contact-info-card">
-        <div class="contact-info-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <div class="flex items-center gap-4 bg-white border border-gray-200 rounded-xl px-5 py-4">
+        <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </div>
-        <div>
-          <div class="contact-info-label">Email</div>
-          <div class="contact-info-value">christ.kadjo@ectbech.au</div>
-        </div>
+        <div><div class="text-xs text-gray-500 mb-0.5">Email</div><div class="text-sm font-semibold text-gray-700">christ.kadjo@epiech.eu</div></div>
       </div>
-      <div class="contact-info-card">
-        <div class="contact-info-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <div class="flex items-center gap-4 bg-white border border-gray-200 rounded-xl px-5 py-4">
+        <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
-        <div>
-          <div class="contact-info-label">Localisation</div>
-          <div class="contact-info-value">Port Bouët, Côte d'Ivoire</div>
-        </div>
+        <div><div class="text-xs text-gray-500 mb-0.5">Localisation</div><div class="text-sm font-semibold text-gray-700">Port Bouët, Côte d'Ivoire</div></div>
       </div>
-      <div class="contact-info-card">
-        <div class="contact-info-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      <div class="flex items-center gap-4 bg-white border border-gray-200 rounded-xl px-5 py-4">
+        <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+          <svg class="w-5 h-5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
         </div>
-        <div>
-          <div class="contact-info-label">LinkedIn</div>
-          <div class="contact-info-value">linkedin.com/in/blin-kado-519b81138</div>
-        </div>
+        <div><div class="text-xs text-gray-500 mb-0.5">LinkedIn</div><div class="text-sm font-semibold text-gray-700">linkedin.com/in/blin-kado-519b81138</div></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <p>© 2026 Kadjo Blin Ariel Christ Ebenezer. Tous droits réservés.</p>
-  <p>Développé avec ❤️ à Port Bouët, Côte d'Ivoire</p>
+<footer class="px-24 py-6 flex justify-between items-center" style="background:#0f1b4d;">
+  <p class="text-xs text-white/50">© 2026 Kadjo Blin Ariel Christ Ebenezer. Tous droits réservés.</p>
+  <p class="text-xs text-white/50">Développé avec ❤️ à Port Bouët, Côte d'Ivoire</p>
 </footer>
-  <script src="script.js"></script>
+
+<script>
+  // Skill bars animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
+          bar.style.width = bar.dataset.width + '%';
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('.skill-card').forEach(card => observer.observe(card));
+
+  // Active nav link
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const scrollObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.remove('text-white', 'bg-blue-600');
+          link.classList.add('text-gray-500');
+          if (link.getAttribute('href') === '#' + entry.target.id) {
+            link.classList.add('text-white', 'bg-blue-600');
+            link.classList.remove('text-gray-500');
+          }
+        });
+      }
+    });
+  }, { threshold: 0.4 });
+  sections.forEach(s => scrollObs.observe(s));
+</script>
 </body>
 </html>
