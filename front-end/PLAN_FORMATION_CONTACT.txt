@@ -1,0 +1,21 @@
+1. Mettre la section Formation dans le composant Education
+
+a. On garde le fichier app/components/Education.tsx parce qu'il est déjà importé dans app/page.tsx.
+Pourquoi : changer le nom du composant demanderait aussi de modifier les imports.
+
+b. On remplace son contenu par la section Formation collée.
+Pourquoi : le contenu collé contient les statistiques et la timeline détaillée.
+
+c. On convertit le HTML en JSX.
+Pourquoi : React utilise className, style avec des objets, et strokeWidth dans les SVG.
+
+2. Mettre la section Contact dans le composant Contact
+
+a. On garde le formulaire fonctionnel existant.
+Pourquoi : le bouton peut continuer à afficher un état d'envoi au lieu d'être seulement décoratif.
+
+b. On remplace l'affichage par celui du HTML collé.
+Pourquoi : cela donne le rendu demandé avec les champs Nom, Email, Sujet, Message et les informations de contact.
+
+c. On vérifie les deux fichiers avec ESLint.
+Pourquoi : cela permet de confirmer que les composants convertis ne contiennent pas d'erreurs JSX.

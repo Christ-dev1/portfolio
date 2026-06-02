@@ -1,0 +1,10 @@
+1. Corriger le composant Footer
+
+a. On remplace le HTML brut dans app/components/Footer.tsx.
+Pourquoi : dans un composant React, on ne peut pas laisser le mot FOOTER ni utiliser class au lieu de className.
+
+b. On convertit le style inline.
+Pourquoi : en JSX, style doit recevoir un objet JavaScript comme style={{ background: "#0f1b4d" }}.
+
+c. On vérifie le fichier avec ESLint.
+Pourquoi : cela confirme que le footer est valide côté React / Next.js.

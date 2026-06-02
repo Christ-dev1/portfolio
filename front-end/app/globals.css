@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply overflow-x-hidden;
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+}
+
+@layer components {
+  .section {
+    @apply py-20 px-6;
+  }
+  .section-badge {
+    @apply inline-flex items-center gap-2 bg-blue-50 text-blue-600 text-xs font-semibold uppercase px-4 py-2 rounded-full mb-4;
+  }
+  .section-badge::before {
+    content: '';
+    @apply w-1.5 h-1.5 rounded-full bg-blue-600;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-gray-700 mb-2;
+  }
+  .skills-underline {
+    @apply w-12 h-1 bg-blue-600 rounded mx-auto mt-1;
+  }
+  .card {
+    @apply bg-white border border-gray-200 rounded-2xl p-6 shadow-sm;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors;
+  }
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border border-gray-300 text-gray-700 font-semibold py-3 px-8 rounded-lg hover:bg-gray-50 transition-colors;
+  }
+  .skill-bar {
+    @apply h-2 bg-gray-200 rounded-full overflow-hidden;
+  }
+  .skill-bar-fill {
+    @apply h-full rounded-full bg-gradient-to-r from-blue-600 to-blue-400 transition-all duration-1000;
+  }
+}
+
+/* Navbar */
+nav {
+  @apply sticky top-0 z-40 bg-white border-b border-gray-200;
+}
+
+.nav-link {
+  @apply px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors;
+}
+
+.nav-link.active {
+  @apply text-blue-600 font-semibold;
+}
+
+/* Hero */
+#hero {
+  @apply min-h-screen flex items-center;
+  background: linear-gradient(135deg, #0f1b4d 0%, #1a2a72 40%, #1e3a8a 70%, #1d4ed8 100%);
+}
+
+#hero::before {
+  content: '';
+  @apply absolute inset-0 pointer-events-none;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.hero-left {
+  @apply flex-1 relative z-10 md:px-6;
+}
+
+.hero-name-1 {
+  @apply text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-1;
+}
+
+.hero-name-2 {
+  @apply text-4xl md:text-5xl lg:text-6xl font-extrabold text-blue-300 mb-6;
+}
+
+.hero-role {
+  @apply text-lg font-semibold text-white mb-4;
+}
+
+.hero-desc {
+  @apply text-sm md:text-base text-gray-200 max-w-md mb-6 leading-relaxed;
+}
+
+.hero-tag {
+  @apply px-3 py-1 border border-white/20 rounded-lg text-xs font-medium text-white bg-white/10;
+}
+
+.project-card-v2 {
+  @apply border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all;
+}
+
+.project-card-top {
+  @apply p-6;
+}
+
+.project-icon {
+  @apply w-12 h-12 rounded-xl flex items-center justify-center text-white flex-shrink-0;
+}
+
+.project-icon.blue {
+  @apply bg-blue-600;
+}
+
+.project-icon.pink {
+  @apply bg-gradient-to-br from-pink-500 to-purple-600;
+}
+
+.project-icon.green {
+  @apply bg-green-600;
+}
+
+.project-icon.orange {
+  @apply bg-gradient-to-br from-orange-500 to-red-500;
+}
+
+/* Formation Timeline */
+.formation-timeline {
+  @apply relative flex flex-col gap-6 mt-4;
+}
+
+.formation-line {
+  @apply absolute left-1/2 top-0 bottom-0 w-0.5 -translate-x-1/2 bg-gradient-to-b from-indigo-300 via-pink-300 to-green-300;
+}
+
+.formation-row {
+  @apply grid grid-cols-[1fr_12px_1fr] items-center gap-6 relative z-10;
+}
+
+.formation-dot {
+  @apply w-4 h-4 rounded-full border-2 border-blue-600 bg-white justify-self-center;
+}
+
+.formation-card.empty {
+  @apply invisible;
+}
+
+.formation-badge {
+  @apply inline-block text-xs font-semibold px-3 py-1 rounded-full;
+}
+
+.formation-badge.encours {
+  @apply bg-green-100 text-green-700;
+}
+
+.formation-badge.complete {
+  @apply bg-gray-100 text-gray-600;
+}
+
+/* About section styles */
+.about-grid {
+  @apply grid md:grid-cols-2 gap-8 items-center;
+}
+
+.about-photo {
+  @apply w-full aspect-square rounded-2xl bg-gradient-to-br from-blue-900 to-blue-600 flex items-center justify-center text-6xl text-white/30;
+}
+
+.about-info {
+  @apply grid grid-cols-2 gap-4 mt-6;
+}
+
+.about-info-label {
+  @apply text-xs font-semibold text-gray-600 uppercase;
+}
+
+.about-info-value {
+  @apply text-lg font-bold text-gray-700 mt-1;
+}
+
+/* Skills */
+.skills-grid {
+  @apply grid md:grid-cols-2 gap-8;
+}
+
+.skill-card {
+  @apply bg-white border border-gray-200 rounded-2xl p-6 shadow-sm;
+}
+
+.skill-card-title {
+  @apply flex items-center gap-2 text-lg font-bold text-gray-700 mb-6;
+}
+
+.skill-card-title .dot {
+  @apply w-2.5 h-2.5 rounded-full bg-blue-600;
+}
+
+.skill-bar-item {
+  @apply mb-4 last:mb-0;
+}
+
+.skill-bar-label {
+  @apply flex justify-between text-sm text-gray-700 mb-2;
+}
+
+/* Contact */
+.contact-bar {
+  @apply bg-blue-900 py-6 px-6;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.contact-bar-item {
+  @apply flex items-center gap-4;
+}
+
+.contact-bar-icon {
+  @apply w-11 h-11 rounded-xl border border-white/20 bg-white/10 flex items-center justify-center flex-shrink-0;
+}
+
+.contact-bar-icon svg {
+  @apply w-5 h-5 text-white;
+}
+
+.contact-bar-label {
+  @apply text-xs text-white/60 mb-0.5;
+}
+
+.contact-bar-value {
+  @apply text-sm font-bold text-white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-bar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
