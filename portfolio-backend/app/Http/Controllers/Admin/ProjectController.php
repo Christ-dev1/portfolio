@@ -93,5 +93,16 @@ class ProjectController extends Controller
             'technologies' => ['nullable', 'string'],
             'published_at' => ['nullable', 'date'],
         ]);
-    }
+
+        }
+public function publish(Project $project)
+{
+    $project->update([
+        'is_featured' => true,
+        'published_at' => now(),
+    ]);
+
+    return redirect()->route('admin.projects.show', $project)
+        ->with('success', 'Projet publié avec succès !');
 }
+        }

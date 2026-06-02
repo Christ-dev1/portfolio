@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('github_url')->nullable();
             $table->string('demo_url')->nullable();
             $table->text('technologies')->nullable();
+            $table->text('key_features')->nullable(); 
             $table->boolean('is_featured')->default(false);
             $table->timestamp('published_at')->nullable();
             $table->timestamps();

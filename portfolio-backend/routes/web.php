@@ -22,3 +22,9 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::post('messages/{contactMessage}/read', [ContactMessageController::class, 'markAsRead'])->name('messages.read');
     Route::delete('messages/{contactMessage}', [ContactMessageController::class, 'destroy'])->name('messages.destroy');
 });
+
+Route::patch('/admin/projects/{project}/publish', [ProjectController::class, 'publish'])
+    ->name('admin.projects.publish');
+
+Route::patch('/admin/projects/{project}/unpublish', [ProjectController::class, 'unpublish'])
+    ->name('admin.projects.unpublish');
