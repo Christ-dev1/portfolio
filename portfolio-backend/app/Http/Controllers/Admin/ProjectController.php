@@ -81,20 +81,21 @@ class ProjectController extends Controller
         return redirect()->route('admin.projects.index')->with('success', 'Projet supprime avec succes.');
     }
 
-    private function validatedData(Request $request): array
-    {
-        return $request->validate([
-            'title' => ['required', 'string', 'max:255'],
-            'description' => ['required', 'string'],
-            'content' => ['nullable', 'string'],
-            'image' => ['nullable', 'image', 'max:2048'],
-            'github_url' => ['nullable', 'url', 'max:255'],
-            'demo_url' => ['nullable', 'url', 'max:255'],
-            'technologies' => ['nullable', 'string'],
-            'published_at' => ['nullable', 'date'],
-        ]);
-
+   private function validatedData(Request $request): array
+{
+    return $request->validate([
+        'title'        => ['required', 'string', 'max:255'],
+        'description'  => ['required', 'string'],
+        'content'      => ['nullable', 'string'],
+        'image'        => ['nullable', 'image', 'max:2048'],
+        'github_url'   => ['nullable', 'url', 'max:255'],
+        'demo_url'     => ['nullable', 'url', 'max:255'],
+        'technologies' => ['nullable', 'string'],
+        'key_features' => ['nullable', 'string'],  
+        'published_at' => ['nullable', 'date'],
+    ]);
         }
+
 public function publish(Project $project)
 {
     $project->update([
@@ -104,5 +105,16 @@ public function publish(Project $project)
 
     return redirect()->route('admin.projects.show', $project)
         ->with('success', 'Projet publié avec succès !');
+}
+
+public function unpublish(Project $project)
+{
+    $project->update([
+        'is_featured' => false,
+        'published_at' => null,
+    ]);
+
+    return redirect()->route('admin.projects.show', $project)
+        ->with('success', 'Projet dépublié.');
 }
         }

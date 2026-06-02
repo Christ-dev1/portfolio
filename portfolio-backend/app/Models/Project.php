@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Model;
     'github_url',
     'demo_url',
     'technologies',
+    'key_features', 
     'is_featured',
     'published_at',
 ])]
