@@ -11,7 +11,7 @@ export interface Project {
 }
 
 export async function getProjects(): Promise<Project[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/projects`, {
     next: { revalidate: 60 },
   });
   if (!res.ok) return [];

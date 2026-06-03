@@ -530,9 +530,6 @@ video {
 .invisible {
   visibility: hidden;
 }
-.fixed {
-  position: fixed;
-}
 .absolute {
   position: absolute;
 }

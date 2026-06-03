@@ -1,0 +1,689 @@
+0 verbose cli /home/wecode/.nvm/versions/node/v24.13.0/bin/node /home/wecode/.nvm/versions/node/v24.13.0/bin/npm
+1 info using npm@11.6.2
+2 info using node@v24.13.0
+3 silly config load:file:/home/wecode/.nvm/versions/node/v24.13.0/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/wecode/Rendu/portfolio/front-end/.npmrc
+5 silly config load:file:/home/wecode/.npmrc
+6 silly config load:file:/home/wecode/.nvm/versions/node/v24.13.0/etc/npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:/home/wecode/Rendu/portfolio/front-end/clean/_logs/2026-06-03T18_05_38_395Z-
+10 verbose logfile /home/wecode/Rendu/portfolio/front-end/clean/_logs/2026-06-03T18_05_38_395Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 silly fetch manifest @emnapi/core@^1.7.1
+16 silly packumentCache full:https://registry.npmjs.org/@emnapi%2fcore cache-miss
+17 http cache https://registry.npmjs.org/@emnapi%2fcore 8ms (cache hit)
+18 silly packumentCache full:https://registry.npmjs.org/@emnapi%2fcore set size:108001 disposed:false
+19 silly fetch manifest @emnapi/runtime@^1.7.1
+20 silly packumentCache full:https://registry.npmjs.org/@emnapi%2fruntime cache-miss
+21 http cache https://registry.npmjs.org/@emnapi%2fruntime 70ms (cache hit)
+22 silly packumentCache full:https://registry.npmjs.org/@emnapi%2fruntime set size:109985 disposed:false
+23 silly placeDep ROOT @emnapi/core@1.10.0 OK for: @napi-rs/wasm-runtime@1.1.4 want: ^1.7.1
+24 silly placeDep ROOT @emnapi/runtime@1.10.0 OK for: @napi-rs/wasm-runtime@1.1.4 want: ^1.7.1
+25 silly reify mark retired [
+25 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/electron-to-chromium'
+25 silly reify ]
+26 silly reify mark retired [ '/home/wecode/Rendu/portfolio/front-end/node_modules/nanoid' ]
+27 silly reify mark retired [ '/home/wecode/Rendu/portfolio/front-end/node_modules/node-releases' ]
+28 silly reify mark retired [
+28 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/@next/swc-linux-x64-musl'
+28 silly reify ]
+29 silly reify mark retired [
+29 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/acorn',
+29 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/acorn'
+29 silly reify ]
+30 silly reify mark retired [
+30 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/autoprefixer',
+30 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/autoprefixer'
+30 silly reify ]
+31 silly reify mark retired [
+31 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/browserslist',
+31 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/browserslist'
+31 silly reify ]
+32 silly reify mark retired [
+32 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/baseline-browser-mapping',
+32 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/baseline-browser-mapping'
+32 silly reify ]
+33 silly reify mark retired [
+33 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/cssesc',
+33 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/cssesc'
+33 silly reify ]
+34 silly reify mark retired [
+34 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint',
+34 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/eslint'
+34 silly reify ]
+35 silly reify mark retired [
+35 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-import-resolver-node/node_modules/resolve',
+35 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-import-resolver-node/node_modules/.bin/resolve'
+35 silly reify ]
+36 silly reify mark retired [
+36 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-plugin-react/node_modules/resolve',
+36 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-plugin-react/node_modules/.bin/resolve'
+36 silly reify ]
+37 silly reify mark retired [
+37 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-plugin-react/node_modules/semver',
+37 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-plugin-react/node_modules/.bin/semver'
+37 silly reify ]
+38 silly reify mark retired [
+38 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-plugin-import/node_modules/semver',
+38 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-plugin-import/node_modules/.bin/semver'
+38 silly reify ]
+39 silly reify mark retired [
+39 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/glob',
+39 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/glob'
+39 silly reify ]
+40 silly reify mark retired [
+40 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/jiti',
+40 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/jiti'
+40 silly reify ]
+41 silly reify mark retired [
+41 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/js-yaml',
+41 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/js-yaml'
+41 silly reify ]
+42 silly reify mark retired [
+42 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/json5',
+42 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/json5'
+42 silly reify ]
+43 silly reify mark retired [
+43 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/loose-envify',
+43 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/loose-envify'
+43 silly reify ]
+44 silly reify mark retired [
+44 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/napi-postinstall',
+44 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/napi-postinstall'
+44 silly reify ]
+45 silly reify mark retired [
+45 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/node-exports-info/node_modules/semver',
+45 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/node-exports-info/node_modules/.bin/semver'
+45 silly reify ]
+46 silly reify mark retired [
+46 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/next',
+46 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/next'
+46 silly reify ]
+47 silly reify mark retired [
+47 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/resolve',
+47 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/resolve'
+47 silly reify ]
+48 silly reify mark retired [
+48 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/rimraf',
+48 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/rimraf'
+48 silly reify ]
+49 silly reify mark retired [
+49 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/semver',
+49 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/semver'
+49 silly reify ]
+50 silly reify mark retired [
+50 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/sucrase',
+50 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/sucrase',
+50 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/sucrase-node'
+50 silly reify ]
+51 silly reify mark retired [
+51 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/tailwindcss',
+51 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/tailwind',
+51 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/tailwindcss'
+51 silly reify ]
+52 silly reify mark retired [
+52 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/update-browserslist-db',
+52 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/update-browserslist-db'
+52 silly reify ]
+53 silly reify mark retired [
+53 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/typescript',
+53 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/tsc',
+53 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/tsserver'
+53 silly reify ]
+54 silly reify mark retired [
+54 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/which',
+54 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/node-which'
+54 silly reify ]
+55 silly reify moves {
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/electron-to-chromium': '/home/wecode/Rendu/portfolio/front-end/node_modules/.electron-to-chromium-gYMVDjFn',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/nanoid': '/home/wecode/Rendu/portfolio/front-end/node_modules/.nanoid-1GCHXPnW',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/node-releases': '/home/wecode/Rendu/portfolio/front-end/node_modules/.node-releases-XsFnKK7n',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/@next/swc-linux-x64-musl': '/home/wecode/Rendu/portfolio/front-end/node_modules/@next/.swc-linux-x64-musl-gmVSg3CK',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/acorn': '/home/wecode/Rendu/portfolio/front-end/node_modules/.acorn-HcNpty5q',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/acorn': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.acorn-ZsjZSPDm',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/autoprefixer': '/home/wecode/Rendu/portfolio/front-end/node_modules/.autoprefixer-nyHdnObW',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/autoprefixer': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.autoprefixer-h7uC2hsG',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/browserslist': '/home/wecode/Rendu/portfolio/front-end/node_modules/.browserslist-COOh6RlN',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/browserslist': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.browserslist-ijk8Xf69',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/baseline-browser-mapping': '/home/wecode/Rendu/portfolio/front-end/node_modules/.baseline-browser-mapping-Dgkuvt3G',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/baseline-browser-mapping': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.baseline-browser-mapping-YI6qsXi5',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/cssesc': '/home/wecode/Rendu/portfolio/front-end/node_modules/.cssesc-noVNkhnN',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/cssesc': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.cssesc-hpmrWX0a',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint': '/home/wecode/Rendu/portfolio/front-end/node_modules/.eslint-7QvmrF8e',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/eslint': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.eslint-DeQ6YuUL',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-import-resolver-node/node_modules/resolve': '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-import-resolver-node/node_modules/.resolve-GY8bUWJV',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-import-resolver-node/node_modules/.bin/resolve': '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-import-resolver-node/node_modules/.bin/.resolve-5ILspM01',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-plugin-react/node_modules/resolve': '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-plugin-react/node_modules/.resolve-hn2uZc9i',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-plugin-react/node_modules/.bin/resolve': '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-plugin-react/node_modules/.bin/.resolve-cdFBPV0O',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-plugin-react/node_modules/semver': '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-plugin-react/node_modules/.semver-8loTzX9l',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-plugin-react/node_modules/.bin/semver': '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-plugin-react/node_modules/.bin/.semver-OGWCZRW2',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-plugin-import/node_modules/semver': '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-plugin-import/node_modules/.semver-UPm8Vj6h',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-plugin-import/node_modules/.bin/semver': '/home/wecode/Rendu/portfolio/front-end/node_modules/eslint-plugin-import/node_modules/.bin/.semver-YSirDNOI',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/glob': '/home/wecode/Rendu/portfolio/front-end/node_modules/.glob-bfJY9NNY',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/glob': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.glob-DcmH4FIy',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/jiti': '/home/wecode/Rendu/portfolio/front-end/node_modules/.jiti-I0JxBPnv',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/jiti': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.jiti-zqDU1a0y',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/js-yaml': '/home/wecode/Rendu/portfolio/front-end/node_modules/.js-yaml-TQyQFiXh',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/js-yaml': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.js-yaml-8dCoTxXz',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/json5': '/home/wecode/Rendu/portfolio/front-end/node_modules/.json5-xnF2DNpO',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/json5': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.json5-pYI80Tpd',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/loose-envify': '/home/wecode/Rendu/portfolio/front-end/node_modules/.loose-envify-ddgq1byf',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/loose-envify': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.loose-envify-xjiWch61',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/napi-postinstall': '/home/wecode/Rendu/portfolio/front-end/node_modules/.napi-postinstall-zkdYuHgk',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/napi-postinstall': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.napi-postinstall-4bAJFrSk',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/node-exports-info/node_modules/semver': '/home/wecode/Rendu/portfolio/front-end/node_modules/node-exports-info/node_modules/.semver-GHL0P42N',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/node-exports-info/node_modules/.bin/semver': '/home/wecode/Rendu/portfolio/front-end/node_modules/node-exports-info/node_modules/.bin/.semver-rfRkdTil',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/next': '/home/wecode/Rendu/portfolio/front-end/node_modules/.next-vx0pnjn9',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/next': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.next-CNdisqy4',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/resolve': '/home/wecode/Rendu/portfolio/front-end/node_modules/.resolve-wnI8U4UR',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/resolve': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.resolve-6DUeqHQ9',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/rimraf': '/home/wecode/Rendu/portfolio/front-end/node_modules/.rimraf-uZOzeezf',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/rimraf': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.rimraf-xzASPsqX',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/semver': '/home/wecode/Rendu/portfolio/front-end/node_modules/.semver-FNuftVOb',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/semver': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.semver-GmdBRZUg',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/sucrase': '/home/wecode/Rendu/portfolio/front-end/node_modules/.sucrase-5UZBgHjK',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/sucrase': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.sucrase-01e9J6oL',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/sucrase-node': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.sucrase-node-c3cBdGHK',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/tailwindcss': '/home/wecode/Rendu/portfolio/front-end/node_modules/.tailwindcss-6QdzEX6a',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/tailwind': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.tailwind-CiIvIcgz',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/tailwindcss': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.tailwindcss-sEl21quq',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/update-browserslist-db': '/home/wecode/Rendu/portfolio/front-end/node_modules/.update-browserslist-db-k9S4lPeX',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/update-browserslist-db': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.update-browserslist-db-X0uUAKqC',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/typescript': '/home/wecode/Rendu/portfolio/front-end/node_modules/.typescript-v1B6j0eU',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/tsc': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.tsc-lfzRWK2s',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/tsserver': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.tsserver-fqPQcGHq',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/which': '/home/wecode/Rendu/portfolio/front-end/node_modules/.which-h0EXV44n',
+55 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/node-which': '/home/wecode/Rendu/portfolio/front-end/node_modules/.bin/.node-which-qWMjpXZQ'
+55 silly reify }
+56 silly audit bulk request {
+56 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+56 silly audit   '@emnapi/wasi-threads': [ '1.2.1' ],
+56 silly audit   '@eslint-community/eslint-utils': [ '4.9.1' ],
+56 silly audit   '@eslint-community/regexpp': [ '4.12.2' ],
+56 silly audit   '@eslint/eslintrc': [ '2.1.4' ],
+56 silly audit   '@eslint/js': [ '8.57.1' ],
+56 silly audit   '@humanwhocodes/config-array': [ '0.13.0' ],
+56 silly audit   '@humanwhocodes/module-importer': [ '1.0.1' ],
+56 silly audit   '@humanwhocodes/object-schema': [ '2.0.3' ],
+56 silly audit   '@isaacs/cliui': [ '8.0.2' ],
+56 silly audit   'ansi-regex': [ '6.2.2', '5.0.1' ],
+56 silly audit   'strip-ansi': [ '7.2.0', '6.0.1' ],
+56 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+56 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+56 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+56 silly audit   '@jridgewell/trace-mapping': [ '0.3.31' ],
+56 silly audit   '@napi-rs/wasm-runtime': [ '1.1.4' ],
+56 silly audit   '@next/env': [ '14.2.35' ],
+56 silly audit   '@next/eslint-plugin-next': [ '14.2.35' ],
+56 silly audit   '@next/swc-darwin-arm64': [ '14.2.33' ],
+56 silly audit   '@next/swc-darwin-x64': [ '14.2.33' ],
+56 silly audit   '@next/swc-linux-arm64-gnu': [ '14.2.33' ],
+56 silly audit   '@next/swc-linux-arm64-musl': [ '14.2.33' ],
+56 silly audit   '@next/swc-linux-x64-gnu': [ '14.2.33' ],
+56 silly audit   '@next/swc-linux-x64-musl': [ '14.2.33' ],
+56 silly audit   '@next/swc-win32-arm64-msvc': [ '14.2.33' ],
+56 silly audit   '@next/swc-win32-ia32-msvc': [ '14.2.33' ],
+56 silly audit   '@next/swc-win32-x64-msvc': [ '14.2.33' ],
+56 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+56 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+56 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+56 silly audit   '@nolyfill/is-core-module': [ '1.0.39' ],
+56 silly audit   '@pkgjs/parseargs': [ '0.11.0' ],
+56 silly audit   '@rtsao/scc': [ '1.1.0' ],
+56 silly audit   '@rushstack/eslint-patch': [ '1.16.1' ],
+56 silly audit   '@swc/counter': [ '0.1.3' ],
+56 silly audit   '@swc/helpers': [ '0.5.5' ],
+56 silly audit   '@tybys/wasm-util': [ '0.10.2' ],
+56 silly audit   '@types/json5': [ '0.0.29' ],
+56 silly audit   '@types/node': [ '20.19.41' ],
+56 silly audit   '@types/prop-types': [ '15.7.15' ],
+56 silly audit   '@types/react': [ '18.3.29' ],
+56 silly audit   '@types/react-dom': [ '18.3.7' ],
+56 silly audit   '@typescript-eslint/eslint-plugin': [ '8.60.0' ],
+56 silly audit   ignore: [ '7.0.5', '5.3.2' ],
+56 silly audit   '@typescript-eslint/parser': [ '8.60.0' ],
+56 silly audit   '@typescript-eslint/project-service': [ '8.60.0' ],
+56 silly audit   '@typescript-eslint/scope-manager': [ '8.60.0' ],
+56 silly audit   '@typescript-eslint/tsconfig-utils': [ '8.60.0' ],
+56 silly audit   '@typescript-eslint/type-utils': [ '8.60.0' ],
+56 silly audit   '@typescript-eslint/types': [ '8.60.0' ],
+56 silly audit   '@typescript-eslint/typescript-estree': [ '8.60.0' ],
+56 silly audit   'balanced-match': [ '4.0.4', '1.0.2' ],
+56 silly audit   'brace-expansion': [ '5.0.6', '1.1.15', '2.1.1' ],
+56 silly audit   minimatch: [ '10.2.5', '9.0.9', '3.1.5' ],
+56 silly audit   '@typescript-eslint/utils': [ '8.60.0' ],
+56 silly audit   '@typescript-eslint/visitor-keys': [ '8.60.0' ],
+56 silly audit   'eslint-visitor-keys': [ '5.0.1', '3.4.3' ],
+56 silly audit   '@ungap/structured-clone': [ '1.3.1' ],
+56 silly audit   '@unrs/resolver-binding-android-arm-eabi': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-android-arm64': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-darwin-arm64': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-darwin-x64': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-freebsd-x64': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-linux-arm-gnueabihf': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-linux-arm-musleabihf': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-linux-arm64-gnu': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-linux-arm64-musl': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-linux-loong64-gnu': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-linux-loong64-musl': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-linux-ppc64-gnu': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-linux-riscv64-gnu': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-linux-riscv64-musl': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-linux-s390x-gnu': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-linux-x64-gnu': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-linux-x64-musl': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-openharmony-arm64': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-wasm32-wasi': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-win32-arm64-msvc': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-win32-ia32-msvc': [ '1.12.2' ],
+56 silly audit   '@unrs/resolver-binding-win32-x64-msvc': [ '1.12.2' ],
+56 silly audit   acorn: [ '8.16.0' ],
+56 silly audit   'acorn-jsx': [ '5.3.2' ],
+56 silly audit   ajv: [ '6.15.0' ],
+56 silly audit   'ansi-styles': [ '4.3.0', '6.2.3' ],
+56 silly audit   'any-promise': [ '1.3.0' ],
+56 silly audit   anymatch: [ '3.1.3' ],
+56 silly audit   arg: [ '5.0.2' ],
+56 silly audit   argparse: [ '2.0.1' ],
+56 silly audit   'aria-query': [ '5.3.2' ],
+56 silly audit   'array-buffer-byte-length': [ '1.0.2' ],
+56 silly audit   'array-includes': [ '3.1.9' ],
+56 silly audit   'array.prototype.findlast': [ '1.2.5' ],
+56 silly audit   'array.prototype.findlastindex': [ '1.2.6' ],
+56 silly audit   'array.prototype.flat': [ '1.3.3' ],
+56 silly audit   'array.prototype.flatmap': [ '1.3.3' ],
+56 silly audit   'array.prototype.tosorted': [ '1.1.4' ],
+56 silly audit   'arraybuffer.prototype.slice': [ '1.0.4' ],
+56 silly audit   'ast-types-flow': [ '0.0.8' ],
+56 silly audit   'async-function': [ '1.0.0' ],
+56 silly audit   autoprefixer: [ '10.5.0' ],
+56 silly audit   'fraction.js': [ '5.3.4' ],
+56 silly audit   'available-typed-arrays': [ '1.0.7' ],
+56 silly audit   'axe-core': [ '4.11.4' ],
+56 silly audit   'axobject-query': [ '4.1.0' ],
+56 silly audit   'baseline-browser-mapping': [ '2.10.33' ],
+56 silly audit   'binary-extensions': [ '2.3.0' ],
+56 silly audit   braces: [ '3.0.3' ],
+56 silly audit   browserslist: [ '4.28.2' ],
+56 silly audit   busboy: [ '1.6.0' ],
+56 silly audit   'call-bind': [ '1.0.9' ],
+56 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+56 silly audit   'call-bound': [ '1.0.4' ],
+56 silly audit   callsites: [ '3.1.0' ],
+56 silly audit   'camelcase-css': [ '2.0.1' ],
+56 silly audit   'caniuse-lite': [ '1.0.30001793' ],
+56 silly audit   chalk: [ '4.1.2' ],
+56 silly audit   chokidar: [ '3.6.0' ],
+56 silly audit   'glob-parent': [ '5.1.2', '6.0.2' ],
+56 silly audit   'client-only': [ '0.0.1' ],
+56 silly audit   'color-convert': [ '2.0.1' ],
+56 silly audit   'color-name': [ '1.1.4' ],
+56 silly audit   commander: [ '4.1.1' ],
+56 silly audit   'concat-map': [ '0.0.1' ],
+56 silly audit   'cross-spawn': [ '7.0.6' ],
+56 silly audit   cssesc: [ '3.0.0' ],
+56 silly audit   csstype: [ '3.2.3' ],
+56 silly audit   'damerau-levenshtein': [ '1.0.8' ],
+56 silly audit   'data-view-buffer': [ '1.0.2' ],
+56 silly audit   'data-view-byte-length': [ '1.0.2' ],
+56 silly audit   'data-view-byte-offset': [ '1.0.1' ],
+56 silly audit   debug: [ '4.4.3', '3.2.7' ],
+56 silly audit   'deep-is': [ '0.1.4' ],
+56 silly audit   'define-data-property': [ '1.1.4' ],
+56 silly audit   'define-properties': [ '1.2.1' ],
+56 silly audit   didyoumean: [ '1.2.2' ],
+56 silly audit   dlv: [ '1.1.3' ],
+56 silly audit   doctrine: [ '3.0.0', '2.1.0' ],
+56 silly audit   'dunder-proto': [ '1.0.1' ],
+56 silly audit   eastasianwidth: [ '0.2.0' ],
+56 silly audit   'electron-to-chromium': [ '1.5.364' ],
+56 silly audit   'emoji-regex': [ '9.2.2', '8.0.0' ],
+56 silly audit   'es-abstract': [ '1.24.2' ],
+56 silly audit   'es-define-property': [ '1.0.1' ],
+56 silly audit   'es-errors': [ '1.3.0' ],
+56 silly audit   'es-iterator-helpers': [ '1.3.2' ],
+56 silly audit   'es-object-atoms': [ '1.1.2' ],
+56 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+56 silly audit   'es-shim-unscopables': [ '1.1.0' ],
+56 silly audit   'es-to-primitive': [ '1.3.0' ],
+56 silly audit   'escape-string-regexp': [ '4.0.0' ],
+56 silly audit   eslint: [ '8.57.1' ],
+56 silly audit   'eslint-config-next': [ '14.2.35' ],
+56 silly audit   'eslint-import-resolver-node': [ '0.3.10' ],
+56 silly audit   resolve: [ '2.0.0-next.7', '1.22.12' ],
+56 silly audit   'eslint-import-resolver-typescript': [ '3.10.1' ],
+56 silly audit   'eslint-module-utils': [ '2.13.0' ],
+56 silly audit   'eslint-plugin-import': [ '2.32.0' ],
+56 silly audit   semver: [ '6.3.1', '7.8.1' ],
+56 silly audit   'eslint-plugin-jsx-a11y': [ '6.10.2' ],
+56 silly audit   'eslint-plugin-react': [ '7.37.5' ],
+56 silly audit   'eslint-plugin-react-hooks': [ '5.0.0-canary-7118f5dd7-20230705' ],
+56 silly audit   'eslint-scope': [ '7.2.2' ],
+56 silly audit   espree: [ '9.6.1' ],
+56 silly audit   esquery: [ '1.7.0' ],
+56 silly audit   esrecurse: [ '4.3.0' ],
+56 silly audit   estraverse: [ '5.3.0' ],
+56 silly audit   esutils: [ '2.0.3' ],
+56 silly audit   'fast-deep-equal': [ '3.1.3' ],
+56 silly audit   'fast-glob': [ '3.3.3' ],
+56 silly audit   'fast-json-stable-stringify': [ '2.1.0' ],
+56 silly audit   'fast-levenshtein': [ '2.0.6' ],
+56 silly audit   fastq: [ '1.20.1' ],
+56 silly audit   'file-entry-cache': [ '6.0.1' ],
+56 silly audit   'fill-range': [ '7.1.1' ],
+56 silly audit   'find-up': [ '5.0.0' ],
+56 silly audit   'flat-cache': [ '3.2.0' ],
+56 silly audit   flatted: [ '3.4.2' ],
+56 silly audit   'for-each': [ '0.3.5' ],
+56 silly audit   'foreground-child': [ '3.3.1' ],
+56 silly audit   'fs.realpath': [ '1.0.0' ],
+56 silly audit   fsevents: [ '2.3.3' ],
+56 silly audit   'function-bind': [ '1.1.2' ],
+56 silly audit   'function.prototype.name': [ '1.1.8' ],
+56 silly audit   'functions-have-names': [ '1.2.3' ],
+56 silly audit   'generator-function': [ '2.0.1' ],
+56 silly audit   'get-intrinsic': [ '1.3.0' ],
+56 silly audit   'get-proto': [ '1.0.1' ],
+56 silly audit   'get-symbol-description': [ '1.1.0' ],
+56 silly audit   'get-tsconfig': [ '4.14.0' ],
+56 silly audit   glob: [ '10.3.10', '7.2.3' ],
+56 silly audit   globals: [ '13.24.0' ],
+56 silly audit   globalthis: [ '1.0.4' ],
+56 silly audit   gopd: [ '1.2.0' ],
+56 silly audit   'graceful-fs': [ '4.2.11' ],
+56 silly audit   graphemer: [ '1.4.0' ],
+56 silly audit   'has-bigints': [ '1.1.0' ],
+56 silly audit   'has-flag': [ '4.0.0' ],
+56 silly audit   'has-property-descriptors': [ '1.0.2' ],
+56 silly audit   'has-proto': [ '1.2.0' ],
+56 silly audit   'has-symbols': [ '1.1.0' ],
+56 silly audit   'has-tostringtag': [ '1.0.2' ],
+56 silly audit   hasown: [ '2.0.4' ],
+56 silly audit   'import-fresh': [ '3.3.1' ],
+56 silly audit   imurmurhash: [ '0.1.4' ],
+56 silly audit   inflight: [ '1.0.6' ],
+56 silly audit   inherits: [ '2.0.4' ],
+56 silly audit   'internal-slot': [ '1.1.0' ],
+56 silly audit   'is-array-buffer': [ '3.0.5' ],
+56 silly audit   'is-async-function': [ '2.1.1' ],
+56 silly audit   'is-bigint': [ '1.1.0' ],
+56 silly audit   'is-binary-path': [ '2.1.0' ],
+56 silly audit   'is-boolean-object': [ '1.2.2' ],
+56 silly audit   'is-bun-module': [ '2.0.0' ],
+56 silly audit   'is-callable': [ '1.2.7' ],
+56 silly audit   'is-core-module': [ '2.16.2' ],
+56 silly audit   'is-data-view': [ '1.0.2' ],
+56 silly audit   'is-date-object': [ '1.1.0' ],
+56 silly audit   'is-extglob': [ '2.1.1' ],
+56 silly audit   'is-finalizationregistry': [ '1.1.1' ],
+56 silly audit   'is-fullwidth-code-point': [ '3.0.0' ],
+56 silly audit   'is-generator-function': [ '1.1.2' ],
+56 silly audit   'is-glob': [ '4.0.3' ],
+56 silly audit   'is-map': [ '2.0.3' ],
+56 silly audit   'is-negative-zero': [ '2.0.3' ],
+56 silly audit   'is-number': [ '7.0.0' ],
+56 silly audit   'is-number-object': [ '1.1.1' ],
+56 silly audit   'is-path-inside': [ '3.0.3' ],
+56 silly audit   'is-regex': [ '1.2.1' ],
+56 silly audit   'is-set': [ '2.0.3' ],
+56 silly audit   'is-shared-array-buffer': [ '1.0.4' ],
+56 silly audit   'is-string': [ '1.1.1' ],
+56 silly audit   'is-symbol': [ '1.1.1' ],
+56 silly audit   'is-typed-array': [ '1.1.15' ],
+56 silly audit   'is-weakmap': [ '2.0.2' ],
+56 silly audit   'is-weakref': [ '1.1.1' ],
+56 silly audit   'is-weakset': [ '2.0.4' ],
+56 silly audit   isarray: [ '2.0.5' ],
+56 silly audit   isexe: [ '2.0.0' ],
+56 silly audit   'iterator.prototype': [ '1.1.5' ],
+56 silly audit   jackspeak: [ '2.3.6' ],
+56 silly audit   jiti: [ '1.21.7' ],
+56 silly audit   'js-tokens': [ '4.0.0' ],
+56 silly audit   'js-yaml': [ '4.2.0' ],
+56 silly audit   'json-buffer': [ '3.0.1' ],
+56 silly audit   'json-schema-traverse': [ '0.4.1' ],
+56 silly audit   'json-stable-stringify-without-jsonify': [ '1.0.1' ],
+56 silly audit   json5: [ '1.0.2' ],
+56 silly audit   'jsx-ast-utils': [ '3.3.5' ],
+56 silly audit   keyv: [ '4.5.4' ],
+56 silly audit   'language-subtag-registry': [ '0.3.23' ],
+56 silly audit   'language-tags': [ '1.0.9' ],
+56 silly audit   levn: [ '0.4.1' ],
+56 silly audit   lilconfig: [ '3.1.3' ],
+56 silly audit   'lines-and-columns': [ '1.2.4' ],
+56 silly audit   'locate-path': [ '6.0.0' ],
+56 silly audit   'lodash.merge': [ '4.6.2' ],
+56 silly audit   'loose-envify': [ '1.4.0' ],
+56 silly audit   'lru-cache': [ '10.4.3' ],
+56 silly audit   'math-intrinsics': [ '1.1.0' ],
+56 silly audit   merge2: [ '1.4.1' ],
+56 silly audit   micromatch: [ '4.0.8' ],
+56 silly audit   minimist: [ '1.2.8' ],
+56 silly audit   minipass: [ '7.1.3' ],
+56 silly audit   ms: [ '2.1.3' ],
+56 silly audit   mz: [ '2.7.0' ],
+56 silly audit   nanoid: [ '3.3.12' ],
+56 silly audit   'napi-postinstall': [ '0.3.4' ],
+56 silly audit   'natural-compare': [ '1.4.0' ],
+56 silly audit   next: [ '14.2.35' ],
+56 silly audit   postcss: [ '8.4.31', '8.5.15' ],
+56 silly audit   'node-exports-info': [ '1.6.0' ],
+56 silly audit   'node-releases': [ '2.0.46' ],
+56 silly audit   'normalize-path': [ '3.0.0' ],
+56 silly audit   'object-assign': [ '4.1.1' ],
+56 silly audit   'object-hash': [ '3.0.0' ],
+56 silly audit   'object-inspect': [ '1.13.4' ],
+56 silly audit   'object-keys': [ '1.1.1' ],
+56 silly audit   'object.assign': [ '4.1.7' ],
+56 silly audit   'object.entries': [ '1.1.9' ],
+56 silly audit   'object.fromentries': [ '2.0.8' ],
+56 silly audit   'object.groupby': [ '1.0.3' ],
+56 silly audit   'object.values': [ '1.2.1' ],
+56 silly audit   once: [ '1.4.0' ],
+56 silly audit   optionator: [ '0.9.4' ],
+56 silly audit   'own-keys': [ '1.0.1' ],
+56 silly audit   'p-limit': [ '3.1.0' ],
+56 silly audit   'p-locate': [ '5.0.0' ],
+56 silly audit   'parent-module': [ '1.0.1' ],
+56 silly audit   'path-exists': [ '4.0.0' ],
+56 silly audit   'path-is-absolute': [ '1.0.1' ],
+56 silly audit   'path-key': [ '3.1.1' ],
+56 silly audit   'path-parse': [ '1.0.7' ],
+56 silly audit   'path-scurry': [ '1.11.1' ],
+56 silly audit   picocolors: [ '1.1.1' ],
+56 silly audit   picomatch: [ '2.3.2', '4.0.4' ],
+56 silly audit   pify: [ '2.3.0' ],
+56 silly audit   pirates: [ '4.0.7' ],
+56 silly audit   'possible-typed-array-names': [ '1.1.0' ],
+56 silly audit   'postcss-import': [ '15.1.0' ],
+56 silly audit   'postcss-js': [ '4.1.0' ],
+56 silly audit   'postcss-load-config': [ '6.0.1' ],
+56 silly audit   'postcss-nested': [ '6.2.0' ],
+56 silly audit   'postcss-selector-parser': [ '6.1.2' ],
+56 silly audit   'postcss-value-parser': [ '4.2.0' ],
+56 silly audit   'prelude-ls': [ '1.2.1' ],
+56 silly audit   'prop-types': [ '15.8.1' ],
+56 silly audit   punycode: [ '2.3.1' ],
+56 silly audit   'queue-microtask': [ '1.2.3' ],
+56 silly audit   react: [ '18.3.1' ],
+56 silly audit   'react-dom': [ '18.3.1' ],
+56 silly audit   'react-is': [ '16.13.1' ],
+56 silly audit   'read-cache': [ '1.0.0' ],
+56 silly audit   readdirp: [ '3.6.0' ],
+56 silly audit   'reflect.getprototypeof': [ '1.0.10' ],
+56 silly audit   'regexp.prototype.flags': [ '1.5.4' ],
+56 silly audit   'resolve-from': [ '4.0.0' ],
+56 silly audit   'resolve-pkg-maps': [ '1.0.0' ],
+56 silly audit   reusify: [ '1.1.0' ],
+56 silly audit   rimraf: [ '3.0.2' ],
+56 silly audit   'run-parallel': [ '1.2.0' ],
+56 silly audit   'safe-array-concat': [ '1.1.4' ],
+56 silly audit   'safe-push-apply': [ '1.0.0' ],
+56 silly audit   'safe-regex-test': [ '1.1.0' ],
+56 silly audit   scheduler: [ '0.23.2' ],
+56 silly audit   'set-function-length': [ '1.2.2' ],
+56 silly audit   'set-function-name': [ '2.0.2' ],
+56 silly audit   'set-proto': [ '1.0.0' ],
+56 silly audit   'shebang-command': [ '2.0.0' ],
+56 silly audit   'shebang-regex': [ '3.0.0' ],
+56 silly audit   'side-channel': [ '1.1.0' ],
+56 silly audit   'side-channel-list': [ '1.0.1' ],
+56 silly audit   'side-channel-map': [ '1.0.1' ],
+56 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+56 silly audit   'signal-exit': [ '4.1.0' ],
+56 silly audit   'source-map-js': [ '1.2.1' ],
+56 silly audit   'stable-hash': [ '0.0.5' ],
+56 silly audit   'stop-iteration-iterator': [ '1.1.0' ],
+56 silly audit   streamsearch: [ '1.1.0' ],
+56 silly audit   'string-width': [ '5.1.2', '4.2.3' ],
+56 silly audit   'string.prototype.includes': [ '2.0.1' ],
+56 silly audit   'string.prototype.matchall': [ '4.0.12' ],
+56 silly audit   'string.prototype.repeat': [ '1.0.0' ],
+56 silly audit   'string.prototype.trim': [ '1.2.10' ],
+56 silly audit   'string.prototype.trimend': [ '1.0.9' ],
+56 silly audit   'string.prototype.trimstart': [ '1.0.8' ],
+56 silly audit   'strip-bom': [ '3.0.0' ],
+56 silly audit   'strip-json-comments': [ '3.1.1' ],
+56 silly audit   'styled-jsx': [ '5.1.1' ],
+56 silly audit   sucrase: [ '3.35.1' ],
+56 silly audit   'supports-color': [ '7.2.0' ],
+56 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+56 silly audit   tailwindcss: [ '3.4.19' ],
+56 silly audit   'text-table': [ '0.2.0' ],
+56 silly audit   thenify: [ '3.3.1' ],
+56 silly audit   'thenify-all': [ '1.6.0' ],
+56 silly audit   tinyglobby: [ '0.2.17' ],
+56 silly audit   fdir: [ '6.5.0' ],
+56 silly audit   'to-regex-range': [ '5.0.1' ],
+56 silly audit   'ts-api-utils': [ '2.5.0' ],
+56 silly audit   'ts-interface-checker': [ '0.1.13' ],
+56 silly audit   'tsconfig-paths': [ '3.15.0' ],
+56 silly audit   tslib: [ '2.8.1' ],
+56 silly audit   'type-check': [ '0.4.0' ],
+56 silly audit   'type-fest': [ '0.20.2' ],
+56 silly audit   'typed-array-buffer': [ '1.0.3' ],
+56 silly audit   'typed-array-byte-length': [ '1.0.3' ],
+56 silly audit   'typed-array-byte-offset': [ '1.0.4' ],
+56 silly audit   'typed-array-length': [ '1.0.8' ],
+56 silly audit   typescript: [ '5.9.3' ],
+56 silly audit   'unbox-primitive': [ '1.1.0' ],
+56 silly audit   'undici-types': [ '6.21.0' ],
+56 silly audit   'unrs-resolver': [ '1.12.2' ],
+56 silly audit   'update-browserslist-db': [ '1.2.3' ],
+56 silly audit   escalade: [ '3.2.0' ],
+56 silly audit   'uri-js': [ '4.4.1' ],
+56 silly audit   'util-deprecate': [ '1.0.2' ],
+56 silly audit   which: [ '2.0.2' ],
+56 silly audit   'which-boxed-primitive': [ '1.1.1' ],
+56 silly audit   'which-builtin-type': [ '1.2.1' ],
+56 silly audit   'which-collection': [ '1.0.2' ],
+56 silly audit   'which-typed-array': [ '1.1.21' ],
+56 silly audit   'word-wrap': [ '1.2.5' ],
+56 silly audit   'wrap-ansi': [ '8.1.0', '7.0.0' ],
+56 silly audit   wrappy: [ '1.0.2' ],
+56 silly audit   'yocto-queue': [ '0.1.0' ]
+56 silly audit }
+57 http cache which@https://registry.npmjs.org/which/-/which-2.0.2.tgz 0ms (cache hit)
+58 http cache typescript@https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz 0ms (cache hit)
+59 http cache sucrase@https://registry.npmjs.org/sucrase/-/sucrase-3.35.1.tgz 0ms (cache hit)
+60 silly packumentCache corgi:https://registry.npmjs.org/update-browserslist-db cache-miss
+61 http cache tailwindcss@https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.4.19.tgz 0ms (cache hit)
+62 http cache rimraf@https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz 0ms (cache hit)
+63 http cache semver@https://registry.npmjs.org/semver/-/semver-7.8.1.tgz 0ms (cache hit)
+64 http cache next@https://registry.npmjs.org/next/-/next-14.2.35.tgz 0ms (cache hit)
+65 http cache resolve@https://registry.npmjs.org/resolve/-/resolve-1.22.12.tgz 0ms (cache hit)
+66 http cache json5@https://registry.npmjs.org/json5/-/json5-1.0.2.tgz 0ms (cache hit)
+67 http cache napi-postinstall@https://registry.npmjs.org/napi-postinstall/-/napi-postinstall-0.3.4.tgz 0ms (cache hit)
+68 http cache js-yaml@https://registry.npmjs.org/js-yaml/-/js-yaml-4.2.0.tgz 0ms (cache hit)
+69 http cache jiti@https://registry.npmjs.org/jiti/-/jiti-1.21.7.tgz 0ms (cache hit)
+70 http cache loose-envify@https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz 0ms (cache hit)
+71 http cache glob@https://registry.npmjs.org/glob/-/glob-10.3.10.tgz 0ms (cache hit)
+72 http cache eslint@https://registry.npmjs.org/eslint/-/eslint-8.57.1.tgz 0ms (cache hit)
+73 http cache cssesc@https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz 0ms (cache hit)
+74 http cache browserslist@https://registry.npmjs.org/browserslist/-/browserslist-4.28.2.tgz 0ms (cache hit)
+75 http cache baseline-browser-mapping@https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.10.33.tgz 0ms (cache hit)
+76 http cache autoprefixer@https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.5.0.tgz 0ms (cache hit)
+77 http cache acorn@https://registry.npmjs.org/acorn/-/acorn-8.16.0.tgz 0ms (cache hit)
+78 silly packumentCache corgi:https://registry.npmjs.org/nanoid cache-miss
+79 http cache @next/swc-linux-x64-musl@https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-14.2.33.tgz 0ms (cache hit)
+80 silly packumentCache corgi:https://registry.npmjs.org/node-releases cache-miss
+81 silly packumentCache corgi:https://registry.npmjs.org/electron-to-chromium cache-miss
+82 http cache semver@https://registry.npmjs.org/semver/-/semver-6.3.1.tgz 0ms (cache hit)
+83 http cache resolve@https://registry.npmjs.org/resolve/-/resolve-2.0.0-next.7.tgz 0ms (cache hit)
+84 http cache semver@https://registry.npmjs.org/semver/-/semver-6.3.1.tgz 0ms (cache hit)
+85 http cache semver@https://registry.npmjs.org/semver/-/semver-6.3.1.tgz 0ms (cache hit)
+86 http cache resolve@https://registry.npmjs.org/resolve/-/resolve-2.0.0-next.7.tgz 0ms (cache hit)
+87 silly tarball no local data for @next/swc-linux-x64-musl@https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-14.2.33.tgz. Extracting by manifest.
+88 warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+89 http cache https://registry.npmjs.org/update-browserslist-db 364ms (cache hit)
+90 silly packumentCache corgi:https://registry.npmjs.org/update-browserslist-db set size:34844 disposed:false
+91 http cache https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.2.3.tgz 6ms (cache hit)
+92 warn deprecated glob@10.3.10: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+93 warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+94 verbose audit error FetchError: request to https://registry.npmjs.org/-/npm/v1/security/advisories/bulk failed, reason: Client network socket disconnected before secure TLS connection was established
+94 verbose audit error     at ClientRequest.<anonymous> (/home/wecode/.nvm/versions/node/v24.13.0/lib/node_modules/npm/node_modules/minipass-fetch/lib/index.js:130:14)
+94 verbose audit error     at ClientRequest.emit (node:events:508:28)
+94 verbose audit error     at emitErrorEvent (node:_http_client:108:11)
+94 verbose audit error     at _destroy (node:_http_client:962:9)
+94 verbose audit error     at onSocketNT (node:_http_client:982:5)
+94 verbose audit error     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+94 verbose audit error   code: 'ECONNRESET',
+94 verbose audit error   path: null,
+94 verbose audit error   host: 'registry.npmjs.org',
+94 verbose audit error   port: 443,
+94 verbose audit error   localAddress: null,
+94 verbose audit error   errno: 'ECONNRESET',
+94 verbose audit error   type: 'system'
+94 verbose audit error }
+95 silly audit error undefined
+96 silly audit report null
+97 http fetch GET https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-14.2.33.tgz attempt 1 failed with ECONNRESET
+98 http fetch GET https://registry.npmjs.org/nanoid attempt 1 failed with ECONNRESET
+99 http fetch GET https://registry.npmjs.org/electron-to-chromium attempt 1 failed with ECONNRESET
+100 http fetch GET https://registry.npmjs.org/node-releases attempt 1 failed with ECONNRESET
+101 http fetch GET https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-14.2.33.tgz attempt 2 failed with ECONNRESET
+102 http fetch GET https://registry.npmjs.org/electron-to-chromium attempt 2 failed with ECONNRESET
+103 http fetch GET https://registry.npmjs.org/node-releases attempt 2 failed with ECONNRESET
+104 http fetch GET https://registry.npmjs.org/nanoid attempt 2 failed with ECONNRESET
+105 http fetch GET https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-14.2.33.tgz attempt 3 failed with ECONNRESET
+106 verbose reify failed optional dependency /home/wecode/Rendu/portfolio/front-end/node_modules/@next/swc-linux-x64-musl
+107 silly reify mark deleted [
+107 silly reify   '/home/wecode/Rendu/portfolio/front-end/node_modules/@next/swc-linux-x64-musl'
+107 silly reify ]
+108 http fetch GET https://registry.npmjs.org/electron-to-chromium attempt 3 failed with ECONNRESET
+109 http fetch GET https://registry.npmjs.org/node-releases attempt 3 failed with ECONNRESET
+110 http fetch GET https://registry.npmjs.org/nanoid attempt 3 failed with ECONNRESET
+111 http fetch GET 200 https://registry.npmjs.org/nanoid 115582ms (cache stale)
+112 silly packumentCache corgi:https://registry.npmjs.org/nanoid set size:148276 disposed:false
+113 http cache https://registry.npmjs.org/nanoid/-/nanoid-3.3.12.tgz 8ms (cache hit)
+114 verbose type system
+115 verbose stack FetchError: request to https://registry.npmjs.org/node-releases failed, reason: Client network socket disconnected before secure TLS connection was established
+115 verbose stack     at ClientRequest.<anonymous> (/home/wecode/.nvm/versions/node/v24.13.0/lib/node_modules/npm/node_modules/minipass-fetch/lib/index.js:130:14)
+115 verbose stack     at ClientRequest.emit (node:events:508:28)
+115 verbose stack     at emitErrorEvent (node:_http_client:108:11)
+115 verbose stack     at _destroy (node:_http_client:962:9)
+115 verbose stack     at onSocketNT (node:_http_client:982:5)
+115 verbose stack     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+116 error code ECONNRESET
+117 error errno ECONNRESET
+118 error network request to https://registry.npmjs.org/node-releases failed, reason: Client network socket disconnected before secure TLS connection was established
+119 error network This is a problem related to network connectivity.
+119 error network In most cases you are behind a proxy or have bad network settings.
+119 error network
+119 error network If you are behind a proxy, please make sure that the
+119 error network 'proxy' config is set properly.  See: 'npm help config'
+120 silly unfinished npm timer reify 1780509938488
+121 silly unfinished npm timer reify:unpack 1780509938665
+122 silly unfinished npm timer reifyNode:node_modules/node-releases 1780509938665
+123 silly unfinished npm timer reifyNode:node_modules/electron-to-chromium 1780509938665
+124 verbose cwd /home/wecode/Rendu/portfolio/front-end
+125 verbose os Linux 6.8.0-124-generic
+126 verbose node v24.13.0
+127 verbose npm  v11.6.2
+128 verbose exit 1
+129 verbose code 1
+130 error A complete log of this run can be found in: /home/wecode/Rendu/portfolio/front-end/clean/_logs/2026-06-03T18_05_38_395Z-debug-0.log
