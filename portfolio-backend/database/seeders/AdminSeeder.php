@@ -18,12 +18,10 @@ class AdminSeeder extends Seeder
         ['email' => 'admin@example.com'],
         [
             'name' => 'Admin',
-            'password' => '$2y$12$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+            'password' => Hash::make('password'),
             'created_at' => now(),
             'updated_at' => now(),
         ]
     );
 }
-
-
 }
