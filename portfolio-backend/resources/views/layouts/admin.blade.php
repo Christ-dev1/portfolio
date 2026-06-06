@@ -109,6 +109,7 @@
                 <div class="nav-label">Menu</div>
                 <a class="nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}" href="{{ route('admin.dashboard') }}">Dashboard <span>›</span></a>
                 <a class="nav-link {{ request()->routeIs('admin.projects.*') ? 'active' : '' }}" href="{{ route('admin.projects.index') }}">Projets <span>›</span></a>
+                <a class="nav-link {{ request()->routeIs('admin.formations.*') ? 'active' : '' }}" href="{{ route('admin.formations.index') }}">Formations <span>›</span></a>
                 <a class="nav-link {{ request()->routeIs('admin.messages.*') ? 'active' : '' }}" href="{{ route('admin.messages.index') }}">Messages <span>›</span></a>
                 <div class="nav-label">Session</div>
                 <form method="POST" action="{{ route('logout') }}">

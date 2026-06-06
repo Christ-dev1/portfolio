@@ -14,3 +14,6 @@ Route::get('/projects', function () {
         ->latest('published_at')
         ->get();
 });
+
+ Route::get('/formations', [\App\Http\Controllers\Api\FormationController::class, 'index']);
+Route::get('/formations/{formation}', [\App\Http\Controllers\Api\FormationController::class, 'show']);

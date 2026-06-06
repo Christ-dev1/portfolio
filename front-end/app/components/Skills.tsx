@@ -27,13 +27,13 @@ export default function Skills() {
   }, []);
 
   return (
-    <section id="skills" className="py-20 px-24 bg-gray-100">
+    <section id="skills" className="py-20 px-4 sm:px-8 md:px-16 lg:px-24 bg-gray-100">
       <div className="text-center mb-10">
         <span className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full">Expertise</span>
-        <h2 className="text-4xl font-extrabold text-gray-700 mt-3 mb-2">Compétences Techniques</h2>
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-700 mt-3 mb-2">Compétences Techniques</h2>
         <div className="w-12 h-0.5 bg-blue-600 rounded mx-auto"></div>
       </div>
-      <div className="grid grid-cols-2 gap-6" ref={cardRefs}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6" ref={cardRefs}>
         <div className="bg-white border border-gray-200 rounded-2xl p-7 shadow-sm skill-card">
           <div className="flex items-center gap-2 font-bold text-gray-700 mb-6"><span className="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></span>Frontend</div>
           <div className="mb-4"><div className="flex justify-between text-sm text-gray-700 mb-1.5"><span>React.js</span><span className="text-gray-500 text-xs">85%</span></div><div className="h-1.5 rounded-full bg-[#e5e9f5] overflow-hidden"><div className="skill-bar-fill h-full rounded-full bg-gradient-to-r from-blue-600 to-blue-400" data-width="85"></div></div></div>
