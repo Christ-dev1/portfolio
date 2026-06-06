@@ -12,7 +12,7 @@ export default function About() {
 
     const observers: IntersectionObserver[] = [];
 
-    Array.from(items).forEach((el, i) => {
+    Array.from(items).forEach((el) => {
       const html = el as HTMLElement;
 
       html.style.opacity = "0";

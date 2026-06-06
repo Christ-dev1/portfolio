@@ -58,7 +58,7 @@ export default function Education() {
 
     const observers: IntersectionObserver[] = [];
 
-    elements.forEach((el, i) => {
+    elements.forEach((el) => {
       const html = el as HTMLElement;
 
       html.style.opacity = "0";
