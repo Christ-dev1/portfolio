@@ -8,7 +8,7 @@ export default function Footer() {
         © 2026 Kadjo Blin Ariel Christ Ebenezer. Tous droits réservés.
       </p>
       <p className="text-xs text-white/50">
-        Développé avec ❤️ à Port Bouët, Côte d&apos;Ivoire
+        Développé par KBACE à Port Bouët, Côte d&apos;Ivoire
       </p>
     </footer>
   );
