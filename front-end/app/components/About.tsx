@@ -90,7 +90,7 @@ export default function About() {
                 Disponibilité
               </div>
               <div className="text-sm font-semibold text-green-600 mt-0.5">
-                React.js Disponible
+                24H/24, 7J/7
               </div>
             </div>
 
@@ -99,7 +99,7 @@ export default function About() {
                 LinkedIn
               </div>
               <div className="text-xs font-semibold text-gray-700 mt-0.5">
-                linkedin.com/in/blin-kado
+                https://www.linkedin.com/in/blin-kadjo-592881338/
               </div>
             </div>
 

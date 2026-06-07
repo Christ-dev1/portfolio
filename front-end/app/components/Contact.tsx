@@ -195,8 +195,8 @@ export default function Contact() {
               },
               {
                 label: "LinkedIn",
-                value: "linkedin.com/in/blin-kado-519b81138",
-                href: "https://linkedin.com",
+                value: "https://www.linkedin.com/in/blin-kadjo-592881338/",
+                href: "https://www.linkedin.com/in/blin-kadjo-592881338/",
                 icon: (
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
