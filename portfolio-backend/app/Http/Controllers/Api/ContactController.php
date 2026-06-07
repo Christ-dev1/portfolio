@@ -1,11 +1,12 @@
 <?php
+
 namespace App\Http\Controllers\Api;
+
 use App\Http\Controllers\Controller;
-use App\Mail\ContactMessageMail;
 use App\Models\ContactMessage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Mail;
+use Resend\Laravel\Facades\Resend;
 
 class ContactController extends Controller
 {
@@ -25,10 +26,17 @@ class ContactController extends Controller
         ]);
 
         try {
-            Mail::to(env('ADMIN_EMAIL', 'admin@example.com'))
-                ->send(new ContactMessageMail($message));
+            Resend::emails()->send([
+                'from' => 'Portfolio <onboarding@resend.dev>',
+                'to' => [env('ADMIN_EMAIL')],
+                'subject' => 'Nouveau message portfolio',
+                'html' => view('emails.contact-message', [
+                    'message' => $message
+                ])->render(),
+            ]);
+
         } catch (\Exception $e) {
-            Log::error('Mail error: ' . $e->getMessage());
+            Log::error('Resend error: ' . $e->getMessage());
         }
 
         return response()->json([
