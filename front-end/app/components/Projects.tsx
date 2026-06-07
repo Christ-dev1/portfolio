@@ -128,7 +128,7 @@ export default function Projects() {
                 )}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-auto">
                   <a href={project.github_url ?? "#"} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center py-2 rounded-lg text-xs font-semibold border border-gray-200 text-gray-700 bg-white hover:bg-gray-50 transition-colors">Code source</a>
-                  <a href={project.demo_url ?? "https://monpost.vercel.app/"} target="_blank" rel="noopener noreferrer"
+                  <a href={project.demo_url ?? "#"} target="_blank" rel="noopener noreferrer"
                     className={`flex items-center justify-center py-2 rounded-lg text-xs font-semibold text-white hover:opacity-90 transition ${color.btn.startsWith("from-") ? `bg-gradient-to-r ${color.btn}` : ""}`}
                     style={!color.btn.startsWith("from-") ? { background: color.btn } : {}}>
                     Voir la démo
