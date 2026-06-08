@@ -33,7 +33,7 @@ function IconBook() {
 
 function formatPeriode(formation: Formation) {
   const debut = new Date(formation.date_debut).getFullYear();
-  if (formation.en_cours) return `${debut} – Présent`;
+  if (formation.en_cours && !formation.date_fin) return `${debut} – Présent`;
   if (formation.date_fin) return `${debut} – ${new Date(formation.date_fin).getFullYear()}`;
   return `${debut}`;
 }
@@ -84,8 +84,7 @@ export default function Education() {
     return () => observers.forEach((io) => io.disconnect());
   }, [formations]);
 
-  const enCours = formations.filter((f) => f.en_cours).length;
-
+   const enCours = formations.filter((f) => f.en_cours && !f.date_fin).length;
   return (
     <section id="formation" className="py-20 px-4 sm:px-8 md:px-16 lg:px-24 bg-gray-100">
       <div ref={containerRef}>
