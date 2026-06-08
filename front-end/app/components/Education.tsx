@@ -154,7 +154,8 @@ export default function Education() {
                     <div className="text-right">
                       <div className="text-xs text-gray-500">{formatPeriode(formation)}</div>
                       <div className="text-xs font-semibold text-gray-500">
-                        {formation.en_cours ? "En cours" : "Complété"}
+                      
+                        {formation.en_cours && !formation.date_fin ? "}
                       </div>
                     </div>
                   </div>
