@@ -34,7 +34,8 @@ class FormationController extends Controller
             'diplome'       => 'nullable|string|max:255',
             'lien'          => 'nullable|url|max:255',
         ]);
-        $data['en_cours'] = $request->boolean('en_cours');
+        
+        $data['en_cours'] = !empty($data['date_fin']) ? false : $request->boolean('en_cours');
         Formation::create($data);
         return redirect()->route('admin.formations.index')->with('success', 'Formation ajoutée.');
     }
@@ -57,7 +58,7 @@ class FormationController extends Controller
             'diplome'       => 'nullable|string|max:255',
             'lien'          => 'nullable|url|max:255',
         ]);
-        $data['en_cours'] = $request->boolean('en_cours');
+        $data['en_cours'] = !empty($data['date_fin']) ? false : $request->boolean('en_cours');
         $formation->update($data);
         return redirect()->route('admin.formations.index')->with('success', 'Formation mise à jour.');
     }
