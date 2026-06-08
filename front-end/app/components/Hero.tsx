@@ -18,7 +18,7 @@ export default function Hero() {
             <span className="px-3.5 py-1.5 border border-white/20 rounded-md text-xs font-medium text-white bg-white/[0.06]">MongoDB</span>
           </div>
           <div className="flex gap-3 flex-wrap mb-10 ha5">
-            <a href="/image.png" download className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm px-6 py-3 rounded-xl no-underline transition-all hover:-translate-y-0.5">
+            <a href="/CV - Kadjo Blin Ariel Christ Ebenezer.pdf" download="/CV - Kadjo Blin Ariel Christ Ebenezer.pdf" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm px-6 py-3 rounded-xl no-underline transition-all hover:-translate-y-0.5">
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Télécharger mon CV
             </a>
