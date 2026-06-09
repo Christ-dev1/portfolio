@@ -32,10 +32,10 @@ function IconBook() {
 }
 
 function formatPeriode(formation: Formation) {
-  const debut = new Date(formation.date_debut + 'T00:00:00').getFullYear();
+  const debut = formation.date_debut.substring(0, 4);
   if (formation.en_cours && !formation.date_fin) return `${debut} – Présent`;
-  if (formation.date_fin) return `${debut} – ${new Date(formation.date_fin + 'T00:00:00').getFullYear()}`;
-  return `${debut}`;
+  if (formation.date_fin) return `${debut} – ${formation.date_fin.substring(0, 4)}`;
+  return debut;
 }
 
 export default function Education() {
