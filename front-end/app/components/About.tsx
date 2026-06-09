@@ -45,13 +45,7 @@ export default function About() {
         className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center"
       >
         {/* IMAGE */}
-        <div className="w-full max-w-sm mx-auto md:max-w-none aspect-[4/5] rounded-2xl overflow-hidden">
-          <img
-            src="/57 copie(1).png"
-            alt="Kadjo Blin Ariel"
-            className="w-full h-full object-cover object-top"
-          />
-        </div>
+        
 
         {/* TEXT */}
         <div>
