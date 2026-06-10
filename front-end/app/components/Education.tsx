@@ -31,6 +31,8 @@ function IconBook() {
   );
 }
 
+
+
 function formatPeriode(formation: Formation) {
   const debut = formation.date_debut.substring(0, 4);
   if (formation.en_cours && !formation.date_fin) return `${debut} – Présent`;
