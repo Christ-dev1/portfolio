@@ -88,14 +88,7 @@ export default function About() {
               </div>
             </div>
 
-            <div>
-              <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                LinkedIn
-              </div>
-              <div className="text-xs font-semibold text-gray-700 mt-0.5">
-                https://www.linkedin.com/in/blin-kadjo-592881338/
-              </div>
-            </div>
+            
 
             <div>
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
