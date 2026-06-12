@@ -44,9 +44,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hidden md:block w-[320px] lg:w-[380px] h-[480px] lg:h-[560px] rounded-2xl overflow-hidden shadow-2xl shrink-0 ha-avatar">
-          <img src="/image.png" alt="CV" className="w-full h-full object-cover object-top"/>
-        </div>
+        
       </section>
 
       {/* Bande contacts */}
